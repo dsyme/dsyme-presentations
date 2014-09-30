@@ -1,0 +1,2802 @@
+[
+    {
+        "created_at": "Tue Oct 30 13:22:33 +0000 2012",
+        "id": 263269664291958800,
+        "id_str": "263269664291958785",
+        "text": "RT @dylantredrea: Am I the only one who thinks this 'surprise' Black ops 2 trailer is not that sweet? (Guy Ritche directed it.) http://t ...",
+        "source": "web",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 124164120,
+            "id_str": "124164120",
+            "name": "Aleš Roubíèek",
+            "screen_name": "alesroubicek",
+            "location": "Prague, Czech Republic",
+            "description": "listen to me\r\nWhen I want to speak\r\nAbout the world we live in\r\nAnd life in general",
+            "url": "http://rarous.net/",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://rarous.net/",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                18
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 405,
+            "friends_count": 182,
+            "listed_count": 22,
+            "created_at": "Thu Mar 18 13:25:27 +0000 2010",
+            "favourites_count": 2306,
+            "utc_offset": 3600,
+            "time_zone": "Prague",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 13481,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/2183828606/523694_2726319656575_1814692762_1612640_2040264930_n_normal.jpg",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2183828606/523694_2726319656575_1814692762_1612640_2040264930_n_normal.jpg",
+            "profile_banner_url": "https://si0.twimg.com/profile_banners/124164120/1350121861",
+            "profile_link_color": "0084B4",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweeted_status": {
+            "created_at": "Tue Oct 30 13:21:49 +0000 2012",
+            "id": 263269476466843650,
+            "id_str": "263269476466843648",
+            "text": "Am I the only one who thinks this 'surprise' Black ops 2 trailer is not that sweet? (Guy Ritche directed it.) http://t.co/eFB4BQUo",
+            "source": "web",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 282519129,
+                "id_str": "282519129",
+                "name": "Dylan Tredrea",
+                "screen_name": "dylantredrea",
+                "location": "Prague, CZ",
+                "description": "Video game marketing pro living abroad and broadly living\r\n",
+                "url": null,
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 100,
+                "friends_count": 221,
+                "listed_count": 1,
+                "created_at": "Fri Apr 15 10:58:26 +0000 2011",
+                "favourites_count": 47,
+                "utc_offset": -10800,
+                "time_zone": "Greenland",
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 887,
+                "lang": "en",
+                "contributors_enabled": false,
+                "is_translator": false,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://a0.twimg.com/profile_images/2161904522/kurt2_normal.png",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/2161904522/kurt2_normal.png",
+                "profile_link_color": "0084B4",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 1,
+            "entities": {
+                "hashtags": [],
+                "urls": [
+                    {
+                        "url": "http://t.co/eFB4BQUo",
+                        "expanded_url": "http://www.youtube.com/watch?v=4wIZp_E2CxQ&noredirect=1",
+                        "display_url": "youtube.com/watch?v=4wIZp_…",
+                        "indices": [
+                            110,
+                            130
+                        ]
+                    }
+                ],
+                "user_mentions": []
+            },
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false
+        },
+        "retweet_count": 1,
+        "entities": {
+            "hashtags": [],
+            "urls": [],
+            "user_mentions": [
+                {
+                    "screen_name": "dylantredrea",
+                    "name": "Dylan Tredrea",
+                    "id": 282519129,
+                    "id_str": "282519129",
+                    "indices": [
+                        3,
+                        16
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false
+    },
+    {
+        "created_at": "Tue Oct 30 13:22:06 +0000 2012",
+        "id": 263269547216367600,
+        "id_str": "263269547216367617",
+        "text": "RT @starenka: AnonymousMobileApplicationInstallationEntityNotFoundException #javastyle",
+        "source": "web",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 124164120,
+            "id_str": "124164120",
+            "name": "Aleš Roubíèek",
+            "screen_name": "alesroubicek",
+            "location": "Prague, Czech Republic",
+            "description": "listen to me\r\nWhen I want to speak\r\nAbout the world we live in\r\nAnd life in general",
+            "url": "http://rarous.net/",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://rarous.net/",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                18
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 405,
+            "friends_count": 182,
+            "listed_count": 22,
+            "created_at": "Thu Mar 18 13:25:27 +0000 2010",
+            "favourites_count": 2306,
+            "utc_offset": 3600,
+            "time_zone": "Prague",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 13481,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/2183828606/523694_2726319656575_1814692762_1612640_2040264930_n_normal.jpg",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2183828606/523694_2726319656575_1814692762_1612640_2040264930_n_normal.jpg",
+            "profile_banner_url": "https://si0.twimg.com/profile_banners/124164120/1350121861",
+            "profile_link_color": "0084B4",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweeted_status": {
+            "created_at": "Tue Oct 30 13:20:07 +0000 2012",
+            "id": 263269051961331700,
+            "id_str": "263269051961331712",
+            "text": "AnonymousMobileApplicationInstallationEntityNotFoundException #javastyle",
+            "source": "web",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 14924827,
+                "id_str": "14924827",
+                "name": "starenka",
+                "screen_name": "starenka",
+                "location": "/home/starenka",
+                "description": "Držím prs na aktu doby. PS: Dekadentní neznamená, že bych mìl deset zubù.",
+                "url": "http://www.starenka.net",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "http://www.starenka.net",
+                                "expanded_url": null,
+                                "indices": [
+                                    0,
+                                    23
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 946,
+                "friends_count": 294,
+                "listed_count": 48,
+                "created_at": "Tue May 27 20:00:25 +0000 2008",
+                "favourites_count": 160,
+                "utc_offset": 3600,
+                "time_zone": "Prague",
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 11488,
+                "lang": "en",
+                "contributors_enabled": false,
+                "is_translator": false,
+                "profile_background_color": "EDECE9",
+                "profile_background_image_url": "http://a0.twimg.com/images/themes/theme3/bg.gif",
+                "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme3/bg.gif",
+                "profile_background_tile": false,
+                "profile_image_url": "http://a0.twimg.com/profile_images/1292386130/ava_bigger_normal.jpg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/1292386130/ava_bigger_normal.jpg",
+                "profile_link_color": "088253",
+                "profile_sidebar_border_color": "D3D2CF",
+                "profile_sidebar_fill_color": "E3E2DE",
+                "profile_text_color": "634047",
+                "profile_use_background_image": true,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 1,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "javastyle",
+                        "indices": [
+                            62,
+                            72
+                        ]
+                    }
+                ],
+                "urls": [],
+                "user_mentions": []
+            },
+            "favorited": false,
+            "retweeted": false
+        },
+        "retweet_count": 1,
+        "entities": {
+            "hashtags": [
+                {
+                    "text": "javastyle",
+                    "indices": [
+                        76,
+                        86
+                    ]
+                }
+            ],
+            "urls": [],
+            "user_mentions": [
+                {
+                    "screen_name": "starenka",
+                    "name": "starenka",
+                    "id": 14924827,
+                    "id_str": "14924827",
+                    "indices": [
+                        3,
+                        12
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false
+    },
+    {
+        "created_at": "Tue Oct 30 13:20:16 +0000 2012",
+        "id": 263269086455275520,
+        "id_str": "263269086455275520",
+        "text": "RT @ludivitto: We are looking for a Flash master for a very interesting project (keywords are \"video, generate, report, variations\"). RT ...",
+        "source": "web",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 124164120,
+            "id_str": "124164120",
+            "name": "Aleš Roubíèek",
+            "screen_name": "alesroubicek",
+            "location": "Prague, Czech Republic",
+            "description": "listen to me\r\nWhen I want to speak\r\nAbout the world we live in\r\nAnd life in general",
+            "url": "http://rarous.net/",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://rarous.net/",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                18
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 405,
+            "friends_count": 182,
+            "listed_count": 22,
+            "created_at": "Thu Mar 18 13:25:27 +0000 2010",
+            "favourites_count": 2306,
+            "utc_offset": 3600,
+            "time_zone": "Prague",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 13481,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/2183828606/523694_2726319656575_1814692762_1612640_2040264930_n_normal.jpg",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2183828606/523694_2726319656575_1814692762_1612640_2040264930_n_normal.jpg",
+            "profile_banner_url": "https://si0.twimg.com/profile_banners/124164120/1350121861",
+            "profile_link_color": "0084B4",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweeted_status": {
+            "created_at": "Tue Oct 30 12:58:30 +0000 2012",
+            "id": 263263611315699700,
+            "id_str": "263263611315699713",
+            "text": "We are looking for a Flash master for a very interesting project (keywords are \"video, generate, report, variations\"). RT, please;)",
+            "source": "<a href=\"http://itunes.apple.com/us/app/twitter/id409789998?mt=12\" rel=\"nofollow\">Twitter for Mac</a>",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 14683961,
+                "id_str": "14683961",
+                "name": "Ludìk Èernocký",
+                "screen_name": "ludivitto",
+                "location": "Praha, Czech republic",
+                "description": "Quiet people have the loudest minds. UX/UI. Design. Movies. Soundtracks. Comics. Head Of Product Usage @Socialbakers.",
+                "url": "http://www.faceit.cz",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "http://www.faceit.cz",
+                                "expanded_url": null,
+                                "indices": [
+                                    0,
+                                    20
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 545,
+                "friends_count": 181,
+                "listed_count": 32,
+                "created_at": "Wed May 07 07:43:17 +0000 2008",
+                "favourites_count": 245,
+                "utc_offset": 3600,
+                "time_zone": "Prague",
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 7564,
+                "lang": "en",
+                "contributors_enabled": false,
+                "is_translator": false,
+                "profile_background_color": "FFFFFF",
+                "profile_background_image_url": "http://a0.twimg.com/profile_background_images/509166777/twitter.jpg",
+                "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/509166777/twitter.jpg",
+                "profile_background_tile": false,
+                "profile_image_url": "http://a0.twimg.com/profile_images/1900939421/ennio_normal.jpg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/1900939421/ennio_normal.jpg",
+                "profile_link_color": "437000",
+                "profile_sidebar_border_color": "FFFFFF",
+                "profile_sidebar_fill_color": "EFEFEF",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 2,
+            "entities": {
+                "hashtags": [],
+                "urls": [],
+                "user_mentions": []
+            },
+            "favorited": false,
+            "retweeted": false
+        },
+        "retweet_count": 2,
+        "entities": {
+            "hashtags": [],
+            "urls": [],
+            "user_mentions": [
+                {
+                    "screen_name": "ludivitto",
+                    "name": "Ludìk Èernocký",
+                    "id": 14683961,
+                    "id_str": "14683961",
+                    "indices": [
+                        3,
+                        13
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false
+    },
+    {
+        "created_at": "Tue Oct 30 13:17:37 +0000 2012",
+        "id": 263268420865380350,
+        "id_str": "263268420865380352",
+        "text": "Chcete napsat èi zaèít psát aplikaci pro Windows 8 a potøebujete poradit èi si nechat zkontrolovat svùj stávající... http://t.co/rzZTP5nq",
+        "source": "<a href=\"http://www.facebook.com/twitter\" rel=\"nofollow\">Facebook</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 82318137,
+            "id_str": "82318137",
+            "name": "Filip Øehoøík",
+            "screen_name": "filiprehorik",
+            "location": "",
+            "description": "",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 95,
+            "friends_count": 13,
+            "listed_count": 2,
+            "created_at": "Wed Oct 14 09:19:40 +0000 2009",
+            "favourites_count": 0,
+            "utc_offset": -10800,
+            "time_zone": "Greenland",
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 622,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/489315602/1e4be50_90x120_normal.png",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/489315602/1e4be50_90x120_normal.png",
+            "profile_link_color": "0084B4",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "entities": {
+            "hashtags": [],
+            "urls": [
+                {
+                    "url": "http://t.co/rzZTP5nq",
+                    "expanded_url": "http://fb.me/29SeS1K5m",
+                    "display_url": "fb.me/29SeS1K5m",
+                    "indices": [
+                        117,
+                        137
+                    ]
+                }
+            ],
+            "user_mentions": []
+        },
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false
+    },
+    {
+        "created_at": "Tue Oct 30 13:10:28 +0000 2012",
+        "id": 263266621060157440,
+        "id_str": "263266621060157440",
+        "text": "On the need for an IDE vs. language \"quality\" http://t.co/WWtO2Fy1",
+        "source": "<a href=\"http://twitterfeed.com\" rel=\"nofollow\">twitterfeed</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 17788765,
+            "id_str": "17788765",
+            "name": "reddit_haskell",
+            "screen_name": "reddit_haskell",
+            "location": "",
+            "description": "Daily news and info about all things Haskell related: practical stuff, theory, types, libraries, jobs, patches, releases, events and conferences and more...",
+            "url": "http://www.reddit.com/r/haskell/",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://www.reddit.com/r/haskell/",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                32
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 2057,
+            "friends_count": 1,
+            "listed_count": 197,
+            "created_at": "Mon Dec 01 20:47:51 +0000 2008",
+            "favourites_count": 0,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 6635,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "0099B9",
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme4/bg.gif",
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme4/bg.gif",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/703883579/Haskell-logo-60_normal.png",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/703883579/Haskell-logo-60_normal.png",
+            "profile_link_color": "0099B9",
+            "profile_sidebar_border_color": "5ED4DC",
+            "profile_sidebar_fill_color": "95E8EC",
+            "profile_text_color": "3C3940",
+            "profile_use_background_image": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweet_count": 1,
+        "entities": {
+            "hashtags": [],
+            "urls": [
+                {
+                    "url": "http://t.co/WWtO2Fy1",
+                    "expanded_url": "http://bit.ly/XS9Wuk",
+                    "display_url": "bit.ly/XS9Wuk",
+                    "indices": [
+                        46,
+                        66
+                    ]
+                }
+            ],
+            "user_mentions": []
+        },
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false
+    },
+    {
+        "created_at": "Tue Oct 30 13:06:57 +0000 2012",
+        "id": 263265736322064400,
+        "id_str": "263265736322064384",
+        "text": "Architecture: 300k tweets/sec http://t.co/KGaLiGZz",
+        "source": "<a href=\"http://publicize.wp.com/\" rel=\"nofollow\">WordPress.com</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 44859951,
+            "id_str": "44859951",
+            "name": "Matt Davey",
+            "screen_name": "matt_davey",
+            "location": "London",
+            "description": "CTO, Lab49.  \r\nBlog: Tales from a Trading Desk",
+            "url": "http://mdavey.wordpress.com",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://mdavey.wordpress.com",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                27
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 312,
+            "friends_count": 26,
+            "listed_count": 20,
+            "created_at": "Fri Jun 05 09:50:40 +0000 2009",
+            "favourites_count": 0,
+            "utc_offset": -36000,
+            "time_zone": "Hawaii",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 1598,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "181C1F",
+            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/177582164/x44c56be4450034379bade66c43523ca.jpg",
+            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/177582164/x44c56be4450034379bade66c43523ca.jpg",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/1163284502/blog_normal.jpg",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/1163284502/blog_normal.jpg",
+            "profile_link_color": "CB9934",
+            "profile_sidebar_border_color": "454B52",
+            "profile_sidebar_fill_color": "0E1621",
+            "profile_text_color": "575E61",
+            "profile_use_background_image": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "entities": {
+            "hashtags": [],
+            "urls": [
+                {
+                    "url": "http://t.co/KGaLiGZz",
+                    "expanded_url": "http://wp.me/p4NE-1vD",
+                    "display_url": "wp.me/p4NE-1vD",
+                    "indices": [
+                        30,
+                        50
+                    ]
+                }
+            ],
+            "user_mentions": []
+        },
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false
+    },
+    {
+        "created_at": "Tue Oct 30 12:59:15 +0000 2012",
+        "id": 263263799736422400,
+        "id_str": "263263799736422401",
+        "text": "LinkedIn Events: Progressive F# Tutorials 2012 http://t.co/Mf70VICA",
+        "source": "<a href=\"http://twitter.com/tweetbutton\" rel=\"nofollow\">Tweet Button</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 96631406,
+            "id_str": "96631406",
+            "name": "Simon Cousins",
+            "screen_name": "simontcousins",
+            "location": "Warwickshire, UK",
+            "description": "a functional programmer in an asynchronous world",
+            "url": "http://www.simontylercousins.net",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://www.simontylercousins.net",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                32
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 162,
+            "friends_count": 81,
+            "listed_count": 5,
+            "created_at": "Sun Dec 13 21:39:00 +0000 2009",
+            "favourites_count": 3,
+            "utc_offset": 0,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 305,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/1252537895/record-adapter-2_normal.png",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/1252537895/record-adapter-2_normal.png",
+            "profile_link_color": "0084B4",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "entities": {
+            "hashtags": [],
+            "urls": [
+                {
+                    "url": "http://t.co/Mf70VICA",
+                    "expanded_url": "http://linkd.in/Sfly6b",
+                    "display_url": "linkd.in/Sfly6b",
+                    "indices": [
+                        47,
+                        67
+                    ]
+                }
+            ],
+            "user_mentions": []
+        },
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false
+    },
+    {
+        "created_at": "Tue Oct 30 12:56:41 +0000 2012",
+        "id": 263263151225720830,
+        "id_str": "263263151225720833",
+        "text": "RT @MonoGameTeam: If you are a wiz at decoding ADPCM audio in C#, we could use your help on this issue - https://t.co/iNQ4Eo6o",
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 823083,
+            "id_str": "823083",
+            "name": "Miguel de Icaza",
+            "screen_name": "migueldeicaza",
+            "location": "boston, ma",
+            "description": "Founder Xamarin, Ximian companies;  Software programmer, founder Mono and Gnome projects.",
+            "url": "http://tirania.org/blog",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://tirania.org/blog",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 32415,
+            "friends_count": 748,
+            "listed_count": 2521,
+            "created_at": "Thu Mar 08 21:22:15 +0000 2007",
+            "favourites_count": 14769,
+            "utc_offset": -18000,
+            "time_zone": "Eastern Time (US & Canada)",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 25673,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "705F4C",
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/422542052/nueva_normal.jpg",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/422542052/nueva_normal.jpg",
+            "profile_link_color": "0000FF",
+            "profile_sidebar_border_color": "87BC44",
+            "profile_sidebar_fill_color": "E0FF92",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweeted_status": {
+            "created_at": "Tue Oct 30 12:29:51 +0000 2012",
+            "id": 263256400036233200,
+            "id_str": "263256400036233218",
+            "text": "If you are a wiz at decoding ADPCM audio in C#, we could use your help on this issue - https://t.co/iNQ4Eo6o",
+            "source": "<a href=\"http://itunes.apple.com/us/app/twitter/id409789998?mt=12\" rel=\"nofollow\">Twitter for Mac</a>",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 486435318,
+                "id_str": "486435318",
+                "name": "MonoGame",
+                "screen_name": "MonoGameTeam",
+                "location": "Around the World",
+                "description": "A team of developers dedicated to bringing the joys of XNA 4 to Android/iOS/MacOS/Windows(8 Metro)/Linux/PlayStation & all using C# with OpenGL/DirectX11",
+                "url": "http://monogame.net",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "http://monogame.net",
+                                "expanded_url": null,
+                                "indices": [
+                                    0,
+                                    19
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 878,
+                "friends_count": 76,
+                "listed_count": 23,
+                "created_at": "Wed Feb 08 09:01:55 +0000 2012",
+                "favourites_count": 14,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 1391,
+                "lang": "en",
+                "contributors_enabled": false,
+                "is_translator": false,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://a0.twimg.com/profile_images/1822586970/MonogameLogo512x512_normal.png",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/1822586970/MonogameLogo512x512_normal.png",
+                "profile_link_color": "0084B4",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 6,
+            "entities": {
+                "hashtags": [],
+                "urls": [
+                    {
+                        "url": "https://t.co/iNQ4Eo6o",
+                        "expanded_url": "https://github.com/mono/MonoGame/issues/921",
+                        "display_url": "github.com/mono/MonoGame/…",
+                        "indices": [
+                            87,
+                            108
+                        ]
+                    }
+                ],
+                "user_mentions": []
+            },
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false
+        },
+        "retweet_count": 6,
+        "entities": {
+            "hashtags": [],
+            "urls": [
+                {
+                    "url": "https://t.co/iNQ4Eo6o",
+                    "expanded_url": "https://github.com/mono/MonoGame/issues/921",
+                    "display_url": "github.com/mono/MonoGame/…",
+                    "indices": [
+                        105,
+                        126
+                    ]
+                }
+            ],
+            "user_mentions": [
+                {
+                    "screen_name": "MonoGameTeam",
+                    "name": "MonoGame",
+                    "id": 486435318,
+                    "id_str": "486435318",
+                    "indices": [
+                        3,
+                        16
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false
+    },
+    {
+        "created_at": "Tue Oct 30 12:56:02 +0000 2012",
+        "id": 263262987513638900,
+        "id_str": "263262987513638912",
+        "text": "RT @glunardi: Created a timelapse of hurricane #Sandy passing through 42nd &amp; 10th, New York http://t.co/N188sBX0",
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 823083,
+            "id_str": "823083",
+            "name": "Miguel de Icaza",
+            "screen_name": "migueldeicaza",
+            "location": "boston, ma",
+            "description": "Founder Xamarin, Ximian companies;  Software programmer, founder Mono and Gnome projects.",
+            "url": "http://tirania.org/blog",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://tirania.org/blog",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                23
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 32415,
+            "friends_count": 748,
+            "listed_count": 2521,
+            "created_at": "Thu Mar 08 21:22:15 +0000 2007",
+            "favourites_count": 14769,
+            "utc_offset": -18000,
+            "time_zone": "Eastern Time (US & Canada)",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 25673,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "705F4C",
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/422542052/nueva_normal.jpg",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/422542052/nueva_normal.jpg",
+            "profile_link_color": "0000FF",
+            "profile_sidebar_border_color": "87BC44",
+            "profile_sidebar_fill_color": "E0FF92",
+            "profile_text_color": "000000",
+            "profile_use_background_image": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweeted_status": {
+            "created_at": "Tue Oct 30 12:53:44 +0000 2012",
+            "id": 263262410561949700,
+            "id_str": "263262410561949696",
+            "text": "Created a timelapse of hurricane #Sandy passing through 42nd &amp; 10th, New York http://t.co/N188sBX0",
+            "source": "web",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 6827882,
+                "id_str": "6827882",
+                "name": "Guy Lunardi",
+                "screen_name": "glunardi",
+                "location": "Boston, MA, USA",
+                "description": "Linux desktop enthusiast, traveler, foodie, audiophile and generally happy Guy",
+                "url": "http://collabora.com/",
+                "entities": {
+                    "url": {
+                        "urls": [
+                            {
+                                "url": "http://collabora.com/",
+                                "expanded_url": null,
+                                "indices": [
+                                    0,
+                                    21
+                                ]
+                            }
+                        ]
+                    },
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 764,
+                "friends_count": 490,
+                "listed_count": 39,
+                "created_at": "Fri Jun 15 07:11:30 +0000 2007",
+                "favourites_count": 168,
+                "utc_offset": -18000,
+                "time_zone": "Eastern Time (US & Canada)",
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 1857,
+                "lang": "en",
+                "contributors_enabled": false,
+                "is_translator": false,
+                "profile_background_color": "131516",
+                "profile_background_image_url": "http://a0.twimg.com/images/themes/theme14/bg.gif",
+                "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme14/bg.gif",
+                "profile_background_tile": true,
+                "profile_image_url": "http://a0.twimg.com/profile_images/51521915/n769361353_1944_normal.jpg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/51521915/n769361353_1944_normal.jpg",
+                "profile_link_color": "009999",
+                "profile_sidebar_border_color": "EEEEEE",
+                "profile_sidebar_fill_color": "EFEFEF",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": {
+                "id": "086752cb03de1d5d",
+                "url": "https://api.twitter.com/1.1/geo/id/086752cb03de1d5d.json",
+                "place_type": "city",
+                "name": "Manhattan",
+                "full_name": "Manhattan, NY",
+                "country_code": "US",
+                "country": "United States",
+                "bounding_box": {
+                    "type": "Polygon",
+                    "coordinates": [
+                        [
+                            [
+                                -74.047285,
+                                40.679548
+                            ],
+                            [
+                                -73.907,
+                                40.679548
+                            ],
+                            [
+                                -73.907,
+                                40.882214
+                            ],
+                            [
+                                -74.047285,
+                                40.882214
+                            ]
+                        ]
+                    ]
+                },
+                "attributes": {}
+            },
+            "contributors": null,
+            "retweet_count": 3,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "Sandy",
+                        "indices": [
+                            33,
+                            39
+                        ]
+                    }
+                ],
+                "urls": [
+                    {
+                        "url": "http://t.co/N188sBX0",
+                        "expanded_url": "http://vimeo.com/glunardi/sandy-nyc-timelapse",
+                        "display_url": "vimeo.com/glunardi/sandy…",
+                        "indices": [
+                            82,
+                            102
+                        ]
+                    }
+                ],
+                "user_mentions": []
+            },
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false
+        },
+        "retweet_count": 3,
+        "entities": {
+            "hashtags": [
+                {
+                    "text": "Sandy",
+                    "indices": [
+                        47,
+                        53
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "http://t.co/N188sBX0",
+                    "expanded_url": "http://vimeo.com/glunardi/sandy-nyc-timelapse",
+                    "display_url": "vimeo.com/glunardi/sandy…",
+                    "indices": [
+                        96,
+                        116
+                    ]
+                }
+            ],
+            "user_mentions": [
+                {
+                    "screen_name": "glunardi",
+                    "name": "Guy Lunardi",
+                    "id": 6827882,
+                    "id_str": "6827882",
+                    "indices": [
+                        3,
+                        12
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false
+    },
+    {
+        "created_at": "Tue Oct 30 12:50:08 +0000 2012",
+        "id": 263261503682117630,
+        "id_str": "263261503682117632",
+        "text": "Current status: jamming the Raspberry Pi via an external Overtone client whilst sitting in a café. Life is good.",
+        "source": "<a href=\"http://www.echofon.com/\" rel=\"nofollow\">Echofon</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 636003,
+            "id_str": "636003",
+            "name": "Sam Aaron",
+            "screen_name": "samaaron",
+            "location": "Cambridge, England",
+            "description": "A Communicative Programmer",
+            "url": "http://sam.aaron.name",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://sam.aaron.name",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                21
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 1216,
+            "friends_count": 330,
+            "listed_count": 101,
+            "created_at": "Mon Jan 15 16:26:45 +0000 2007",
+            "favourites_count": 105,
+            "utc_offset": 0,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 2330,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "FCFCFC",
+            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/5767572/Picture_11-small.png",
+            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/5767572/Picture_11-small.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/2784231918/6d2bd9610ac0bbfec7fbafd4ad99590b_normal.png",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2784231918/6d2bd9610ac0bbfec7fbafd4ad99590b_normal.png",
+            "profile_link_color": "FF0080",
+            "profile_sidebar_border_color": "F1F0EF",
+            "profile_sidebar_fill_color": "F1F0EF",
+            "profile_text_color": "333333",
+            "profile_use_background_image": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweet_count": 2,
+        "entities": {
+            "hashtags": [],
+            "urls": [],
+            "user_mentions": []
+        },
+        "favorited": false,
+        "retweeted": false
+    },
+    {
+        "created_at": "Tue Oct 30 12:50:02 +0000 2012",
+        "id": 263261478147198980,
+        "id_str": "263261478147198976",
+        "text": "RT @macus: Jestli se na nìco v nejbližší dobì tìším, tak je to kongres ODS. To bude lepší než kdejaký film.",
+        "source": "web",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 124164120,
+            "id_str": "124164120",
+            "name": "Aleš Roubíèek",
+            "screen_name": "alesroubicek",
+            "location": "Prague, Czech Republic",
+            "description": "listen to me\r\nWhen I want to speak\r\nAbout the world we live in\r\nAnd life in general",
+            "url": "http://rarous.net/",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://rarous.net/",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                18
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 405,
+            "friends_count": 182,
+            "listed_count": 22,
+            "created_at": "Thu Mar 18 13:25:27 +0000 2010",
+            "favourites_count": 2306,
+            "utc_offset": 3600,
+            "time_zone": "Prague",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 13481,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/2183828606/523694_2726319656575_1814692762_1612640_2040264930_n_normal.jpg",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2183828606/523694_2726319656575_1814692762_1612640_2040264930_n_normal.jpg",
+            "profile_banner_url": "https://si0.twimg.com/profile_banners/124164120/1350121861",
+            "profile_link_color": "0084B4",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweeted_status": {
+            "created_at": "Tue Oct 30 12:36:37 +0000 2012",
+            "id": 263258103460552700,
+            "id_str": "263258103460552705",
+            "text": "Jestli se na nìco v nejbližší dobì tìším, tak je to kongres ODS. To bude lepší než kdejaký film.",
+            "source": "web",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 14126894,
+                "id_str": "14126894",
+                "name": "Lukáš Maèí",
+                "screen_name": "macus",
+                "location": "Hradec Králové, Czech republic",
+                "description": "",
+                "url": null,
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 223,
+                "friends_count": 193,
+                "listed_count": 14,
+                "created_at": "Tue Mar 11 20:00:14 +0000 2008",
+                "favourites_count": 203,
+                "utc_offset": 3600,
+                "time_zone": "Prague",
+                "geo_enabled": true,
+                "verified": false,
+                "statuses_count": 2659,
+                "lang": "en",
+                "contributors_enabled": false,
+                "is_translator": false,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
+                "profile_background_tile": false,
+                "profile_image_url": "http://a0.twimg.com/profile_images/2157057598/image_normal.jpg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/2157057598/image_normal.jpg",
+                "profile_link_color": "0084B4",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "default_profile": true,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 1,
+            "entities": {
+                "hashtags": [],
+                "urls": [],
+                "user_mentions": []
+            },
+            "favorited": false,
+            "retweeted": false
+        },
+        "retweet_count": 1,
+        "entities": {
+            "hashtags": [],
+            "urls": [],
+            "user_mentions": [
+                {
+                    "screen_name": "macus",
+                    "name": "Lukáš Maèí",
+                    "id": 14126894,
+                    "id_str": "14126894",
+                    "indices": [
+                        3,
+                        9
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false
+    },
+    {
+        "created_at": "Tue Oct 30 12:45:28 +0000 2012",
+        "id": 263260330128441340,
+        "id_str": "263260330128441344",
+        "text": "Paul Betts properly listed as co-instructor http://t.co/D9HAqbCE. And we will have a *very special* guest! Sign up with code \"meij100\" now.",
+        "source": "web",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 410939902,
+            "id_str": "410939902",
+            "name": "Erik Meijer",
+            "screen_name": "headinthebox",
+            "location": "",
+            "description": "",
+            "url": "http://en.wikipedia.org/wiki/Erik_Meijer_(computer_scientist)",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://en.wikipedia.org/wiki/Erik_Meijer_(computer_scientist)",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                61
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 738,
+            "friends_count": 0,
+            "listed_count": 18,
+            "created_at": "Sat Nov 12 19:43:03 +0000 2011",
+            "favourites_count": 13,
+            "utc_offset": -32400,
+            "time_zone": "Alaska",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 224,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/2434343548/c80bae9z52ca9bbrh4ip_normal.jpeg",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2434343548/c80bae9z52ca9bbrh4ip_normal.jpeg",
+            "profile_link_color": "0084B4",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "entities": {
+            "hashtags": [],
+            "urls": [
+                {
+                    "url": "http://t.co/D9HAqbCE",
+                    "expanded_url": "http://qconsf.com/sf2012/presentations/show_presentation.jsp?oid=4602",
+                    "display_url": "qconsf.com/sf2012/present…",
+                    "indices": [
+                        44,
+                        64
+                    ]
+                }
+            ],
+            "user_mentions": []
+        },
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false
+    },
+    {
+        "created_at": "Tue Oct 30 12:44:22 +0000 2012",
+        "id": 263260053266636800,
+        "id_str": "263260053266636800",
+        "text": "RT @KQK2: #ThingsThatOffendObama Bumps in the road http://t.co/XGWIP7TR",
+        "source": "<a href=\"http://www.flipboard.com\" rel=\"nofollow\">Flipboard</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 159452184,
+            "id_str": "159452184",
+            "name": "Mark Schiffer",
+            "screen_name": "synathlete",
+            "location": "New York",
+            "description": "In-house research entrepeneur and quant/linguist modeler for illicit-behavior/bad actor detection. Open-source intel & synethesia help connect the dots. ",
+            "url": "http://www.bayardrock.com",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://www.bayardrock.com",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                25
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 64,
+            "friends_count": 58,
+            "listed_count": 4,
+            "created_at": "Fri Jun 25 12:09:17 +0000 2010",
+            "favourites_count": 12,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 787,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/116598632/250px-Number_Form--colored.jpg",
+            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/116598632/250px-Number_Form--colored.jpg",
+            "profile_background_tile": true,
+            "profile_image_url": "http://a0.twimg.com/profile_images/2452910311/g6s1nu2bxw0nqcgq5jit_normal.jpeg",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2452910311/g6s1nu2bxw0nqcgq5jit_normal.jpeg",
+            "profile_link_color": "0084B4",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweeted_status": {
+            "created_at": "Tue Oct 30 05:14:20 +0000 2012",
+            "id": 263146795671109630,
+            "id_str": "263146795671109632",
+            "text": "#ThingsThatOffendObama Bumps in the road http://t.co/XGWIP7TR",
+            "source": "web",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 32288130,
+                "id_str": "32288130",
+                "name": "KQK2",
+                "screen_name": "KQK2",
+                "location": "",
+                "description": "The foreign officials were alarmed to learn that I was an American citizen. The Lord's Been Good to Me. Husband/Father #TCOT\r\n \r\n",
+                "url": null,
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 21290,
+                "friends_count": 14935,
+                "listed_count": 175,
+                "created_at": "Fri Apr 17 03:33:41 +0000 2009",
+                "favourites_count": 165,
+                "utc_offset": -32400,
+                "time_zone": "Alaska",
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 16587,
+                "lang": "en",
+                "contributors_enabled": false,
+                "is_translator": false,
+                "profile_background_color": "C0DEED",
+                "profile_background_image_url": "http://a0.twimg.com/profile_background_images/539696637/bg001.jpg",
+                "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/539696637/bg001.jpg",
+                "profile_background_tile": true,
+                "profile_image_url": "http://a0.twimg.com/profile_images/2349352089/8y7fwp264sq8dn2ydi46_normal.jpeg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/2349352089/8y7fwp264sq8dn2ydi46_normal.jpeg",
+                "profile_link_color": "0084B4",
+                "profile_sidebar_border_color": "C0DEED",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "profile_text_color": "333333",
+                "profile_use_background_image": true,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 14,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "ThingsThatOffendObama",
+                        "indices": [
+                            0,
+                            22
+                        ]
+                    }
+                ],
+                "urls": [],
+                "user_mentions": [],
+                "media": [
+                    {
+                        "id": 263146795675303940,
+                        "id_str": "263146795675303937",
+                        "indices": [
+                            41,
+                            61
+                        ],
+                        "media_url": "http://pbs.twimg.com/media/A6bindACQAEKUjP.jpg",
+                        "media_url_https": "https://pbs.twimg.com/media/A6bindACQAEKUjP.jpg",
+                        "url": "http://t.co/XGWIP7TR",
+                        "display_url": "pic.twitter.com/XGWIP7TR",
+                        "expanded_url": "http://twitter.com/KQK2/status/263146795671109632/photo/1",
+                        "type": "photo",
+                        "sizes": {
+                            "large": {
+                                "w": 498,
+                                "h": 505,
+                                "resize": "fit"
+                            },
+                            "medium": {
+                                "w": 498,
+                                "h": 505,
+                                "resize": "fit"
+                            },
+                            "thumb": {
+                                "w": 150,
+                                "h": 150,
+                                "resize": "crop"
+                            },
+                            "small": {
+                                "w": 340,
+                                "h": 345,
+                                "resize": "fit"
+                            }
+                        }
+                    }
+                ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false
+        },
+        "retweet_count": 14,
+        "entities": {
+            "hashtags": [
+                {
+                    "text": "ThingsThatOffendObama",
+                    "indices": [
+                        10,
+                        32
+                    ]
+                }
+            ],
+            "urls": [],
+            "user_mentions": [
+                {
+                    "screen_name": "KQK2",
+                    "name": "KQK2",
+                    "id": 32288130,
+                    "id_str": "32288130",
+                    "indices": [
+                        3,
+                        8
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 263146795675303940,
+                    "id_str": "263146795675303937",
+                    "indices": [
+                        51,
+                        71
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/A6bindACQAEKUjP.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/A6bindACQAEKUjP.jpg",
+                    "url": "http://t.co/XGWIP7TR",
+                    "display_url": "pic.twitter.com/XGWIP7TR",
+                    "expanded_url": "http://twitter.com/KQK2/status/263146795671109632/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "large": {
+                            "w": 498,
+                            "h": 505,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 498,
+                            "h": 505,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 340,
+                            "h": 345,
+                            "resize": "fit"
+                        }
+                    },
+                    "source_status_id": 263146795671109630,
+                    "source_status_id_str": "263146795671109632"
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false
+    },
+    {
+        "created_at": "Tue Oct 30 12:44:12 +0000 2012",
+        "id": 263260009750753280,
+        "id_str": "263260009750753280",
+        "text": "RT @Jacquie0415: “@sherrysamples: OMG! THIS PIC SAYS IT ALL!!! DISGRACEFUL! PLEASE RT THIS PIC! #letsgetobamaout #makesmesick http://t.c ...",
+        "source": "<a href=\"http://www.flipboard.com\" rel=\"nofollow\">Flipboard</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 159452184,
+            "id_str": "159452184",
+            "name": "Mark Schiffer",
+            "screen_name": "synathlete",
+            "location": "New York",
+            "description": "In-house research entrepeneur and quant/linguist modeler for illicit-behavior/bad actor detection. Open-source intel & synethesia help connect the dots. ",
+            "url": "http://www.bayardrock.com",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://www.bayardrock.com",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                25
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 64,
+            "friends_count": 58,
+            "listed_count": 4,
+            "created_at": "Fri Jun 25 12:09:17 +0000 2010",
+            "favourites_count": 12,
+            "utc_offset": null,
+            "time_zone": null,
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 787,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/116598632/250px-Number_Form--colored.jpg",
+            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/116598632/250px-Number_Form--colored.jpg",
+            "profile_background_tile": true,
+            "profile_image_url": "http://a0.twimg.com/profile_images/2452910311/g6s1nu2bxw0nqcgq5jit_normal.jpeg",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2452910311/g6s1nu2bxw0nqcgq5jit_normal.jpeg",
+            "profile_link_color": "0084B4",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweeted_status": {
+            "created_at": "Sat Oct 27 20:24:47 +0000 2012",
+            "id": 262288755791101950,
+            "id_str": "262288755791101954",
+            "text": "“@sherrysamples: OMG! THIS PIC SAYS IT ALL!!! DISGRACEFUL! PLEASE RT THIS PIC! #letsgetobamaout #makesmesick http://t.co/pWz2EFyn”",
+            "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+            "truncated": false,
+            "in_reply_to_status_id": null,
+            "in_reply_to_status_id_str": null,
+            "in_reply_to_user_id": null,
+            "in_reply_to_user_id_str": null,
+            "in_reply_to_screen_name": null,
+            "user": {
+                "id": 351361539,
+                "id_str": "351361539",
+                "name": "Pink Conservative",
+                "screen_name": "Jacquie0415",
+                "location": "?North Star State?",
+                "description": "Travel Expert. #1Vikings & NFL Fan. Aries. Mexico Enthusiast. Fabulous Cook. Dog Lover. GOP 4 LIFE! #tcot #Catholic #Prolife #Nobama. Ultra Conservative",
+                "url": null,
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "protected": false,
+                "followers_count": 2986,
+                "friends_count": 3126,
+                "listed_count": 24,
+                "created_at": "Tue Aug 09 04:16:57 +0000 2011",
+                "favourites_count": 5089,
+                "utc_offset": null,
+                "time_zone": null,
+                "geo_enabled": false,
+                "verified": false,
+                "statuses_count": 8985,
+                "lang": "en",
+                "contributors_enabled": false,
+                "is_translator": false,
+                "profile_background_color": "FF6699",
+                "profile_background_image_url": "http://a0.twimg.com/profile_background_images/307783662/xfa42386230b60da5b9c520fa569782e.png",
+                "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/307783662/xfa42386230b60da5b9c520fa569782e.png",
+                "profile_background_tile": true,
+                "profile_image_url": "http://a0.twimg.com/profile_images/2605815252/image_normal.jpg",
+                "profile_image_url_https": "https://si0.twimg.com/profile_images/2605815252/image_normal.jpg",
+                "profile_banner_url": "https://si0.twimg.com/profile_banners/351361539/1350304728",
+                "profile_link_color": "B40B43",
+                "profile_sidebar_border_color": "CC3366",
+                "profile_sidebar_fill_color": "E5507E",
+                "profile_text_color": "362720",
+                "profile_use_background_image": true,
+                "default_profile": false,
+                "default_profile_image": false,
+                "following": null,
+                "follow_request_sent": null,
+                "notifications": null
+            },
+            "geo": null,
+            "coordinates": null,
+            "place": null,
+            "contributors": null,
+            "retweet_count": 67,
+            "entities": {
+                "hashtags": [
+                    {
+                        "text": "letsgetobamaout",
+                        "indices": [
+                            79,
+                            95
+                        ]
+                    },
+                    {
+                        "text": "makesmesick",
+                        "indices": [
+                            96,
+                            108
+                        ]
+                    }
+                ],
+                "urls": [],
+                "user_mentions": [
+                    {
+                        "screen_name": "sherrysamples",
+                        "name": "Sherry Samples",
+                        "id": 318491039,
+                        "id_str": "318491039",
+                        "indices": [
+                            1,
+                            15
+                        ]
+                    }
+                ],
+                "media": [
+                    {
+                        "id": 262250111919345660,
+                        "id_str": "262250111919345665",
+                        "indices": [
+                            109,
+                            129
+                        ],
+                        "media_url": "http://pbs.twimg.com/media/A6OzFltCUAEprDj.jpg",
+                        "media_url_https": "https://pbs.twimg.com/media/A6OzFltCUAEprDj.jpg",
+                        "url": "http://t.co/pWz2EFyn",
+                        "display_url": "pic.twitter.com/pWz2EFyn",
+                        "expanded_url": "http://twitter.com/sherrysamples/status/262250111915151360/photo/1",
+                        "type": "photo",
+                        "sizes": {
+                            "large": {
+                                "w": 403,
+                                "h": 403,
+                                "resize": "fit"
+                            },
+                            "medium": {
+                                "w": 403,
+                                "h": 403,
+                                "resize": "fit"
+                            },
+                            "thumb": {
+                                "w": 150,
+                                "h": 150,
+                                "resize": "crop"
+                            },
+                            "small": {
+                                "w": 340,
+                                "h": 340,
+                                "resize": "fit"
+                            }
+                        },
+                        "source_status_id": 262250111915151360,
+                        "source_status_id_str": "262250111915151360"
+                    }
+                ]
+            },
+            "favorited": false,
+            "retweeted": false,
+            "possibly_sensitive": false
+        },
+        "retweet_count": 67,
+        "entities": {
+            "hashtags": [
+                {
+                    "text": "letsgetobamaout",
+                    "indices": [
+                        96,
+                        112
+                    ]
+                },
+                {
+                    "text": "makesmesick",
+                    "indices": [
+                        113,
+                        125
+                    ]
+                }
+            ],
+            "urls": [],
+            "user_mentions": [
+                {
+                    "screen_name": "Jacquie0415",
+                    "name": "Pink Conservative",
+                    "id": 351361539,
+                    "id_str": "351361539",
+                    "indices": [
+                        3,
+                        15
+                    ]
+                },
+                {
+                    "screen_name": "sherrysamples",
+                    "name": "Sherry Samples",
+                    "id": 318491039,
+                    "id_str": "318491039",
+                    "indices": [
+                        18,
+                        32
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false
+    },
+    {
+        "created_at": "Tue Oct 30 12:31:51 +0000 2012",
+        "id": 263256901293338620,
+        "id_str": "263256901293338624",
+        "text": "OH: \"Visual Studio is a wrapper around IntelliSense\" via @christianhelle :)",
+        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 43748484,
+            "id_str": "43748484",
+            "name": "Mark Seemann",
+            "screen_name": "ploeh",
+            "location": "Copenhagen",
+            "description": "Agile .Net software developer/architect. Author of Dependency Injection in .NET. Creator of AutoFixture.",
+            "url": "http://blog.ploeh.dk",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://blog.ploeh.dk",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                20
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 2288,
+            "friends_count": 154,
+            "listed_count": 121,
+            "created_at": "Sun May 31 20:22:30 +0000 2009",
+            "favourites_count": 42,
+            "utc_offset": 3600,
+            "time_zone": "Copenhagen",
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 7391,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "1A1B1F",
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/1134355215/Twitter_portrait_01_normal.jpg",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/1134355215/Twitter_portrait_01_normal.jpg",
+            "profile_link_color": "2FC2EF",
+            "profile_sidebar_border_color": "181A1E",
+            "profile_sidebar_fill_color": "252429",
+            "profile_text_color": "666666",
+            "profile_use_background_image": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweet_count": 4,
+        "entities": {
+            "hashtags": [],
+            "urls": [],
+            "user_mentions": [
+                {
+                    "screen_name": "christianhelle",
+                    "name": "Christian Helle",
+                    "id": 169818138,
+                    "id_str": "169818138",
+                    "indices": [
+                        57,
+                        72
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false
+    },
+    {
+        "created_at": "Tue Oct 30 12:30:41 +0000 2012",
+        "id": 263256608405078000,
+        "id_str": "263256608405078016",
+        "text": "Wow. RT @cpuguru: Crazy - this storm is pretty widespread..from Mexico up into Canadia - latest GIF from #UD - http://t.co/TIbHc3Ui #Sandy",
+        "source": "<a href=\"http://www.tweetdeck.com\" rel=\"nofollow\">TweetDeck</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 10072442,
+            "id_str": "10072442",
+            "name": "Rachel Reese",
+            "screen_name": "rachelreese",
+            "location": "Burlington, VT",
+            "description": "I like: math, physics, linguistics, organizing weird things, F#, C#, and Oxford commas. I am: ASPInsider, Software Dev for @mywebgrocer, an @therachii.",
+            "url": "http://rachelree.se",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://rachelree.se",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                19
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 2251,
+            "friends_count": 286,
+            "listed_count": 192,
+            "created_at": "Thu Nov 08 17:20:54 +0000 2007",
+            "favourites_count": 6460,
+            "utc_offset": -28800,
+            "time_zone": "Pacific Time (US & Canada)",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 12157,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "87BC44",
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/2316766323/obsm3vr83jz7vhwneta1_normal.jpeg",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2316766323/obsm3vr83jz7vhwneta1_normal.jpeg",
+            "profile_link_color": "4A7119",
+            "profile_sidebar_border_color": "240D44",
+            "profile_sidebar_fill_color": "C9F099",
+            "profile_text_color": "240D44",
+            "profile_use_background_image": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "entities": {
+            "hashtags": [
+                {
+                    "text": "UD",
+                    "indices": [
+                        105,
+                        108
+                    ]
+                },
+                {
+                    "text": "Sandy",
+                    "indices": [
+                        132,
+                        138
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "http://t.co/TIbHc3Ui",
+                    "expanded_url": "http://is.gd/xX9oP8",
+                    "display_url": "is.gd/xX9oP8",
+                    "indices": [
+                        111,
+                        131
+                    ]
+                }
+            ],
+            "user_mentions": [
+                {
+                    "screen_name": "cpuguru",
+                    "name": "Doug White",
+                    "id": 14361757,
+                    "id_str": "14361757",
+                    "indices": [
+                        8,
+                        16
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false
+    },
+    {
+        "created_at": "Tue Oct 30 12:27:26 +0000 2012",
+        "id": 263255791644053500,
+        "id_str": "263255791644053504",
+        "text": "According to @christianhelle Ctrl + a in Visual Studio moves the cursor to the top or bottom of a code block. I didn't know that. #cddk12",
+        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 43748484,
+            "id_str": "43748484",
+            "name": "Mark Seemann",
+            "screen_name": "ploeh",
+            "location": "Copenhagen",
+            "description": "Agile .Net software developer/architect. Author of Dependency Injection in .NET. Creator of AutoFixture.",
+            "url": "http://blog.ploeh.dk",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://blog.ploeh.dk",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                20
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 2288,
+            "friends_count": 154,
+            "listed_count": 121,
+            "created_at": "Sun May 31 20:22:30 +0000 2009",
+            "favourites_count": 42,
+            "utc_offset": 3600,
+            "time_zone": "Copenhagen",
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 7391,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "1A1B1F",
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme9/bg.gif",
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme9/bg.gif",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/1134355215/Twitter_portrait_01_normal.jpg",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/1134355215/Twitter_portrait_01_normal.jpg",
+            "profile_link_color": "2FC2EF",
+            "profile_sidebar_border_color": "181A1E",
+            "profile_sidebar_fill_color": "252429",
+            "profile_text_color": "666666",
+            "profile_use_background_image": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "entities": {
+            "hashtags": [
+                {
+                    "text": "cddk12",
+                    "indices": [
+                        130,
+                        137
+                    ]
+                }
+            ],
+            "urls": [],
+            "user_mentions": [
+                {
+                    "screen_name": "christianhelle",
+                    "name": "Christian Helle",
+                    "id": 169818138,
+                    "id_str": "169818138",
+                    "indices": [
+                        13,
+                        28
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false
+    },
+    {
+        "created_at": "Tue Oct 30 12:17:06 +0000 2012",
+        "id": 263253191603400700,
+        "id_str": "263253191603400704",
+        "text": "\"F# Succinctly\" http://t.co/ztOeSPVq - read via @Prismatic",
+        "source": "<a href=\"http://getprismatic.com\" rel=\"nofollow\">getprismatic.com</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 99867589,
+            "id_str": "99867589",
+            "name": "Fahad",
+            "screen_name": "fahadsuhaib",
+            "location": "Chennai",
+            "description": "I like to discover and create, especially the stuff that gets made from the unique full-bodied blend of a little design love and little engineering kung-fu.",
+            "url": "http://fadsworld.wordpress.com",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://fadsworld.wordpress.com",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                30
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 239,
+            "friends_count": 286,
+            "listed_count": 19,
+            "created_at": "Mon Dec 28 05:09:31 +0000 2009",
+            "favourites_count": 26,
+            "utc_offset": -18000,
+            "time_zone": "Eastern Time (US & Canada)",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 2442,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "FFF04D",
+            "profile_background_image_url": "http://a0.twimg.com/profile_background_images/139455396/ipad_769.jpg",
+            "profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/139455396/ipad_769.jpg",
+            "profile_background_tile": true,
+            "profile_image_url": "http://a0.twimg.com/profile_images/1646615892/sshot-6_normal.png",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/1646615892/sshot-6_normal.png",
+            "profile_link_color": "0099CC",
+            "profile_sidebar_border_color": "FFF8AD",
+            "profile_sidebar_fill_color": "F6FFD1",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "entities": {
+            "hashtags": [],
+            "urls": [
+                {
+                    "url": "http://t.co/ztOeSPVq",
+                    "expanded_url": "http://prsm.tc/9ckOsN",
+                    "display_url": "prsm.tc/9ckOsN",
+                    "indices": [
+                        16,
+                        36
+                    ]
+                }
+            ],
+            "user_mentions": [
+                {
+                    "screen_name": "Prismatic",
+                    "name": "Prismatic",
+                    "id": 229709694,
+                    "id_str": "229709694",
+                    "indices": [
+                        48,
+                        58
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false
+    },
+    {
+        "created_at": "Tue Oct 30 12:16:40 +0000 2012",
+        "id": 263253082568290300,
+        "id_str": "263253082568290304",
+        "text": "Building Better #web Apps with #fsharp (and @dmohl) today in 5.75 hours! http://t.co/ZDd5k3ts",
+        "source": "<a href=\"http://www.twitter.com\" rel=\"nofollow\">Twitter for Windows Phone</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 94144339,
+            "id_str": "94144339",
+            "name": "Community for F#",
+            "screen_name": "c4fsharp",
+            "location": "Virtually everywhere.",
+            "description": "Community for F# is a virtual user group for F# enthusiasts!",
+            "url": "http://www.communityforfsharp.net/",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://www.communityforfsharp.net/",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                34
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 548,
+            "friends_count": 123,
+            "listed_count": 30,
+            "created_at": "Wed Dec 02 18:22:47 +0000 2009",
+            "favourites_count": 115,
+            "utc_offset": -28800,
+            "time_zone": "Pacific Time (US & Canada)",
+            "geo_enabled": false,
+            "verified": false,
+            "statuses_count": 1658,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "131516",
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme14/bg.gif",
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme14/bg.gif",
+            "profile_background_tile": true,
+            "profile_image_url": "http://a0.twimg.com/profile_images/700533439/fsharp-1_normal.png",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/700533439/fsharp-1_normal.png",
+            "profile_link_color": "009999",
+            "profile_sidebar_border_color": "EEEEEE",
+            "profile_sidebar_fill_color": "EFEFEF",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweet_count": 2,
+        "entities": {
+            "hashtags": [
+                {
+                    "text": "web",
+                    "indices": [
+                        16,
+                        20
+                    ]
+                },
+                {
+                    "text": "fsharp",
+                    "indices": [
+                        31,
+                        38
+                    ]
+                }
+            ],
+            "urls": [
+                {
+                    "url": "http://t.co/ZDd5k3ts",
+                    "expanded_url": "http://fpish.net/course/321",
+                    "display_url": "fpish.net/course/321",
+                    "indices": [
+                        73,
+                        93
+                    ]
+                }
+            ],
+            "user_mentions": [
+                {
+                    "screen_name": "dmohl",
+                    "name": "Daniel Mohl",
+                    "id": 15455122,
+                    "id_str": "15455122",
+                    "indices": [
+                        44,
+                        50
+                    ]
+                }
+            ]
+        },
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false
+    },
+    {
+        "created_at": "Tue Oct 30 12:15:16 +0000 2012",
+        "id": 263252731882516480,
+        "id_str": "263252731882516480",
+        "text": "Cool video of the 1938 category 3 storm that hit New England: http://t.co/IaF1u3Kv",
+        "source": "<a href=\"http://www.tweetdeck.com\" rel=\"nofollow\">TweetDeck</a>",
+        "truncated": false,
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 10072442,
+            "id_str": "10072442",
+            "name": "Rachel Reese",
+            "screen_name": "rachelreese",
+            "location": "Burlington, VT",
+            "description": "I like: math, physics, linguistics, organizing weird things, F#, C#, and Oxford commas. I am: ASPInsider, Software Dev for @mywebgrocer, an @therachii.",
+            "url": "http://rachelree.se",
+            "entities": {
+                "url": {
+                    "urls": [
+                        {
+                            "url": "http://rachelree.se",
+                            "expanded_url": null,
+                            "indices": [
+                                0,
+                                19
+                            ]
+                        }
+                    ]
+                },
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 2251,
+            "friends_count": 286,
+            "listed_count": 192,
+            "created_at": "Thu Nov 08 17:20:54 +0000 2007",
+            "favourites_count": 6460,
+            "utc_offset": -28800,
+            "time_zone": "Pacific Time (US & Canada)",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 12157,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "profile_background_color": "87BC44",
+            "profile_background_image_url": "http://a0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://a0.twimg.com/profile_images/2316766323/obsm3vr83jz7vhwneta1_normal.jpeg",
+            "profile_image_url_https": "https://si0.twimg.com/profile_images/2316766323/obsm3vr83jz7vhwneta1_normal.jpeg",
+            "profile_link_color": "4A7119",
+            "profile_sidebar_border_color": "240D44",
+            "profile_sidebar_fill_color": "C9F099",
+            "profile_text_color": "240D44",
+            "profile_use_background_image": false,
+            "default_profile": false,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": null,
+            "notifications": null
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "entities": {
+            "hashtags": [],
+            "urls": [
+                {
+                    "url": "http://t.co/IaF1u3Kv",
+                    "expanded_url": "http://bit.ly/Srm1VL",
+                    "display_url": "bit.ly/Srm1VL",
+                    "indices": [
+                        62,
+                        82
+                    ]
+                }
+            ],
+            "user_mentions": []
+        },
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false
+    }
+]

@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{D8ECA80D-1F4A-4D9E-A173-0BAA0455C8CA}"
+	ProjectSection(SolutionItems) = preProject
+		1 Language Introduction.fsx = 1 Language Introduction.fsx
+		2 Collection Koans.fsx = 2 Collection Koans.fsx
+		3 Data - Type Providers.fsx = 3 Data - Type Providers.fsx
+		4 Data - Twitter.fsx = 4 Data - Twitter.fsx
+		5 Data - Apiary.fsx = 5 Data - Apiary.fsx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
