@@ -13,13 +13,13 @@ can express (we’ll discuss that later).
 
 In contrast, F# CEs are one syntactic mechanism that can be configured in different ways, including ways that cover
 the use cases of both list comprehensions and do notation, including additional things that can be expressed without
-`stepping outside the notation`, plus other applications.
+"stepping outside the notation", plus other applications.
 
 For those coming from C#, F# CEs cover the use cases corresponding to four separate C# language features: C# enumerator
 methods, C# async methods, C# LINQ expressions and C# 8.0 async enumerator methods (as well as many other use cases).
 Comparing the expressivity of these is not covered in this doc.
 
-Below I’ll explain how to configure F# computation expressions for comprehension (`monoidal`) syntax, and monadic
+Below I’ll explain how to configure F# computation expressions for comprehensions (also called "monoid syntax"), and monadic
 syntax. There are some other possible configurations of F# computation expressions that are used in practice, briefly
 summarized at the end. 
 
