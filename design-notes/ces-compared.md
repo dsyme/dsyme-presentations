@@ -184,7 +184,7 @@ This is what we call comprehension (or monoidal) syntax in F#. There are additio
 
 -	`while` 
 
--	custom operators like `sortBy` and `groupBy` (see the F# language spec and other guides for more on custom operators, not covered in detail in this note)
+-	custom operators like `sortBy` and `groupBy` (see the F# language spec and [other guides for more on custom operators](http://blog.mavnn.co.uk/expanding-existing-computational-expressions/), not covered in detail in this note)
 
 -	some other things
 
