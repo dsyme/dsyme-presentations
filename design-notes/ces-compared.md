@@ -32,6 +32,8 @@ This note is particularly aimed at explaining:
 -	why F# CEs for comprehensions de-sugar the `mapConcat/`bind` operation to the `for` notation rather than
 the `let!` (this is a common source of misunderstanding for people approaching F# CEs from the Haskell/monad `do-notation` perspective)
 
+## Overview of F# Computation Expressions
+
 F# CEs are a syntactic mechanism for de-sugaring language elements inside blocks like `seq {  ...  }` or `async {  ...  }`.
 The outer value such as `seq` or `async` is called the builder. The inner syntax elements available to de-sugared are the same as normal F#/OCaml control syntax, plus `let!`, `return`, `yield`, `return!` and `yield!`:
 
@@ -89,7 +91,7 @@ limited by the nature of the de-sugaring and the rules of method overload resolu
 builder can support any or all of them.
 
 
-Configuring F# Computation Expressions for Monadic Syntax
+## Configuring F# Computation Expressions for Monadic Syntax
 
 When F# computation expressions are configured to monadic syntax you minimally need the following:
 
