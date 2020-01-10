@@ -230,7 +230,11 @@ f xs = [  ...  |  ...  ]
 
 where you can fill in the ` ... ` with whatever you like (except you aren’t allowed to call other list-generating constructs or library functions in there – not even [0 ... ] please).   
 
-For example, it’s my understanding there is no Haskell definition of the above restricted form that generates `3; (a1+1); ...  (an+1); 4; (a1+2); 5;  ... ; (an+2); 5 ` from input list `[ a1 ... an ]` . In F# the function is this:
+For example, it’s my understanding there is no Haskell definition of the above restricted form that generates
+```
+[ 3; (a1+1); ...  (an+1); 4; (a1+2); 5;  ... ; (an+2); 5 ]
+```
+from input list `[ a1 ... an ]` . In F# the comprehension function is this:
 
 ```fsharp
 let f (xs: int list) =
