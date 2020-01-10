@@ -4,8 +4,7 @@
 > Notes based on a discussion with Phillip Wadler, 10/01/2020. This document is a work in progress. Please
 leave comments or send feedback.
 
-F# computation expressions (CEs) are a syntactic de-sugaring of language elements like `for x in xs  ... ` to method calls like `For( ... )`
-on a builder object. They can be configured in many ways.  See also this extensive introduction to F# computation expressions.
+F# computation expressions (CEs) are a syntactic de-sugaring of language elements like `for x in xs  ... ` to method calls like `For( ... )` on a builder object. They can be configured in many ways.  See also [this extensive introduction to F# computation expressions](https://fsharpforfunandprofit.com/posts/computation-expressions-intro/).
 
 Many people coming to F# are familiar with Haskell, and in particular [list comprehension syntax](https://wiki.haskell.org/List_comprehension) and [do notation](https://en.wikibooks.org/wiki/Haskell/do_notation)
 (monad syntax).  In Haskell these are two separate syntactic mechanisms, with limits to what they
@@ -25,11 +24,10 @@ This note is particularly aimed at explaining:
 
 -	why F# CEs are more (or differently) expressive than either Haskell `do` notation or Haskell list comprehensions
 
--	why F# CEs for comprehensions de-sugar the `mapConcat/`bind` operation to the `for` notation rather than
+-	why F# CEs for comprehensions de-sugar the `mapConcat`/`bind` operation to the `for` notation rather than
 the `let!` (this can confuse people approaching F# CEs from the Haskell/monad `do-notation` perspective)
 
-For those coming from C#, F# CEs cover the use cases corresponding to four separate C# language features: C# enumerator
-methods, C# async methods, C# LINQ expressions and C# 8.0 async enumerator methods (as well as many other use cases).
+For those coming from C#, F# CEs cover the use cases corresponding to four separate C# language features: [C# enumerator/iterator methods](https://www.javatpoint.com/csharp-iterators), [C# async methods](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/), [C# LINQ expressions](https://docs.microsoft.com/en-us/dotnet/csharp/linq/) and [C# 8.0 async enumerator methods](https://dotnetcoretutorials.com/2019/01/09/iasyncenumerable-in-c-8/) (as well as many other use cases).
 Comparing the expressivity of these is not covered in this doc.
 
 ## Overview of F# Computation Expressions
@@ -64,7 +62,7 @@ these always stay as they are (with their bodies/branches de-sugared) and are al
 
 The exact de-sugaring is in the F# language spec which covers some additional topics like the insertion of delays.
 
-The different syntax elements are `enabled` by arranging for the static type of the builder to support different
+The different syntax elements are enabled by arranging for the static type of the builder to support different
 methods – these methods are the target de-sugaring. The names of the methods matter, because different method
 names light up different source syntax. For example:
 
@@ -121,23 +119,23 @@ async {
 
 For monad syntax, there are additional optional elements to enrich the syntax. You can optionally have:
 
--	`try/with` (TryWith: M<T> -> (exn -> M<T>) -> M<T>)
+- `try/with` (usual signature `TryWith: M<T> -> (exn -> M<T>) -> M<T>` in monad syntax)
 
--	`try/finally` 
+- `try/finally`  (usual signature `TryFinally: M<T> * (unit -> M<unit>) -> M<T>` in monad syntax)
 
--	`while`
+- `while` (usual signature `While: (unit -> bool) * (unit -> M<unit>) -> M<unit>` in monad syntax)
 
--	`for`
+- `for` (usual signature `For: seq<T> * (T -> M<unit>) -> M<unit>` in monad syntax)
 
--	`return!` (ReturnFrom: M<T> -> M<T>)
+- `return!` (usual signature `ReturnFrom: M<T> -> M<T>` in monad syntax)
 
--	`e1; e2` (Combine: M<unit> * M<T> -> M<T>), useful for one loop followed by another 
+- `e1; e2` (usual signature `Combine: M<unit> * M<T> -> M<T>` in monad syntax), useful for one loop followed by another 
 
--	Some other things
+- Custom operators (see below)
 
 Adding each of these enable further basic syntax de-sugaring to the available syntax in the monadic syntax.
 
-## Configuring F# Computation Expressions for Comprehension Syntax
+## Configuring F# Computation Expressions for Comprehension ("Monoid") Syntax
 
 When F# computation expressions are configured for what we call comprehension (or "monoid") syntax the operation signatures are typically this form:
 ```
@@ -147,19 +145,19 @@ Yield: T -> M<T>
 Zero: M<T>
 ```
 
-The minimum needed to warrant the name `comprehension` is really `For` and `Yield`.
+The minimum needed to warrant the name `comprehension` is `For` and `Yield`.  A `monoid` minimally needs `Yield`, `Combine` and `Zero`.
 
 Note you have a `For` method.  The presence of the `For` method means `for x in xs  ... ` is allowed in the syntax.   So your CE uses `for x in xs ... ` for binding. It does not use `let!` for binding. This is not being treated as a monad (let!), it’s being treated as a comprehension (for). There is no `Bind` method, there is no `let!` syntax, the `For` method takes its place.  
 
-For those familiar with Haskell, it is natural to think of this as offering a syntax for things that in Haskell logically correspond to `MonadPlus` instances.  Here’s how the Haskell terminology maps across:
+For those familiar with Haskell, it is natural to think of this as offering a syntax for things that in Haskell logically correspond to [`MonadPlus`](https://wiki.haskell.org/MonadPlus) instances.  Here’s how the Haskell terminology maps across:
 
--	In F#, the Haskell MonadPlus `bind` operation corresponds to the `for` syntax and is de-sugared to the `For` method
+- In F#, the Haskell MonadPlus `bind` operation corresponds to the `for` syntax and is de-sugared to the `For` method
 
--	The MonadPlus `plus` operation corresponds to sequential composition `e1; e2` syntax (perhaps on two aligned lines with no semicolon), and is de-sugared to the `Combine` method
+- The MonadPlus `mplus` operation corresponds to sequential composition `e1; e2` syntax (perhaps on two aligned lines with no semicolon), and is de-sugared to the `Combine` method
 
--	The MonadPlus `return` operation corresponds to `yield` syntax and is de-sugared to the `Yield` method
+- The MonadPlus `return` operation corresponds to `yield` syntax and is de-sugared to the `Yield` method
 
--	The MonadPlus `zero` operation is inserted implicitly by the compiler (eg. on the empty else branch of an if/then) and is de-sugared to the `Zero` method
+- The MonadPlus `mzero` operation is inserted implicitly by the compiler (eg. on the empty else branch of an if/then) and is de-sugared to the `Zero` method
 
 This allows source syntax like this to be de-sugared:
 
@@ -176,17 +174,17 @@ seq {
 
 This is what we call comprehension (or monoidal) syntax in F#. There are additional optional elements available to enrich the syntax for comprehension CEs. For example you can optionally have:
 
--	`yield!` (YieldFrom : M<T> -> M<T>)
+- `yield!` (YieldFrom : M<T> -> M<T>)
 
--	`try/with` (TryWith: M<T> -> (exn -> M<T>) -> M<T>)
+- `try/with` (TryWith: M<T> -> (exn -> M<T>) -> M<T>)
 
--	`try/finally` (TryFinally: I’ll omit the signature)
+- `try/finally` (TryFinally: I’ll omit the signature)
 
--	`while` 
+- `while` 
 
--	custom operators like `sortBy` and `groupBy` (see the F# language spec and [other guides for more on custom operators](http://blog.mavnn.co.uk/expanding-existing-computational-expressions/), not covered in detail in this note)
+- custom operators like `sortBy` and `groupBy` (see the F# language spec and [other guides for more on custom operators](http://blog.mavnn.co.uk/expanding-existing-computational-expressions/), not covered in detail in this note)
 
--	some other things
+- some other things
 
 ## Why F# Computation Expressions are more expressive than List Comprehensions
 
@@ -210,11 +208,7 @@ There’s a short cut to write it on one line if you like:
 seq { for x in L do for y in M -> N }
 ```
 
-In either case it de-sugars to 
-
-```fsharp
-seq.For(L, (fun x -> seq.For(M, (fun y -> seq.Yield(N)))))
-```
+In either case it de-sugars to `seq.For(L, (fun x -> seq.For(M, (fun y -> seq.Yield(N)))))`
 
 Expressivity of notation can be determined by comparing what functions can be implemented by, say, this in F#:
 
@@ -374,23 +368,25 @@ Likewise, when F# CEs are configured for monadic syntax, they are also more expr
 
 - loops, try/with and try/finally can be included in the syntax and mapped to corresponding operations
 
--	conditionals and pattern matching can be placed within the control structure
+- conditionals and pattern matching can be placed within the control structure
 
--	custom operators can be added, for example the `condition` operator can be added for the distribution monad (an example of declaring and using a custom operator).
+- custom operators can be added, for example the `condition` operator can be added for the distribution monad (here's an example of [declaring](https://github.com/dotnet/fsharp/blob/FSharp.Core-4.2.2/tests/fsharp/core/queriesCustomQueryOps/test.fsx#L336) and [using](https://github.com/dotnet/fsharp/blob/FSharp.Core-4.2.2/tests/fsharp/core/queriesCustomQueryOps/test.fsx#L414) a custom operator).
 
 TODO: give proper examples of these.
 
 ## Other possible configurations of CEs
 
-So far we’ve looked at two configurations of F# CEs.  They can be configured in many other ways and this is done in practice, e.g. for web programming DSLs or asynchronous sequences.  For example,
+So far we’ve looked at two configurations of F# CEs.  They can be configured in many other ways and this is done in practice, e.g. for [web programming DSLs](https://github.com/SaturnFramework/Saturn/blob/master/src/Saturn/Controller.fs#L60) or [F# asynchronous sequences](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html).  For example,
 
--	You can simply have a `Return` method and nothing else, so all you can write is `foo { return x }`.  This has some uses.   
+- You can simply have a `Return` method and nothing else, so all you can write is `foo { return x }`.  Even this has some uses.   
 
--	You can simply have a `Yield` and `Combine` method which only lets you write `foo { e1; e2; e23}` which is useful for some DSLs.  
+- You can simply have a `Yield` and `Combine` method which only lets you write `foo { e1; e2; e23}` which is useful for some DSLs.  
 
--	You can also have indexed-monad-like things where the types carry additional information. 
+- You can also have indexed-monad-like things where the types carry additional information. 
 
--	You can have any other mix of the methods you like to de-sugar the various syntax elements
+- You can have any other mix of the methods you like to de-sugar the various syntax elements
+
+- You can start using method overloading to allow "multi-type" computations that bind on related types.  For example, the F# `task` monad allows you to bind against C# tasks, F# async or C# "task-like" values.
 
 There are lots of possibilities, though they are may or may not be useful, it’s just a syntax de-sugaring. The approach of using a syntax mapping that can be reused in various ways comes from Haskell, LINQ and the LCF theorem provers, but the technical details differ extensively.
 
