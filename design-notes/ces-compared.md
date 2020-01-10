@@ -285,10 +285,10 @@ let f3 (xs: int list) (ys: int list) =
              yield x+1 
           for y in ys do 
              yield y+2 }
-```
 
 // de-sugars to:
 // seq.Combine(seq.For(xs, (fun x -> seq.Yield(x+1))), seq.For(ys, (fun y -> seq.Yield(y+2))))
+```
 
 Likewise, in F# you can use `if/then/else` and sequencing to alternately yield one or two elements:
 
