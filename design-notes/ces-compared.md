@@ -140,10 +140,12 @@ Adding each of these enable further basic syntax de-sugaring to the available sy
 ## Configuring F# Computation Expressions for Comprehension Syntax
 
 When F# computation expressions are configured for what we call comprehension (or "monoid") syntax the operation signatures are typically this form:
+```
 For:  M<T> * (T -> M<U>) -> M<U>
 Combine: M<T> * M<T> -> M<T>
 Yield: T -> M<T>
 Zero: M<T>
+```
 
 The minimum needed to warrant the name `comprehension` is really `For` and `Yield`.
 
