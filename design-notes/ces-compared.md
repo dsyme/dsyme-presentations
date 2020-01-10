@@ -396,4 +396,6 @@ There are lots of possibilities, though they are may or may not be useful, it’
 
 I may have made mistakes, please send a PR to correct.
 
+A final comment: I think extending Haskell with full control syntax (either OCaml-style or Algol-style) which can be de-sugared into diffrerent computation generations may make an interesting project.  Or, to put it another way, there seems to be potential for a pure language which more natively supports a richer, customizable de-sugaring of data and control constructs.
+
 
