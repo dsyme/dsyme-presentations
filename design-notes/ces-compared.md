@@ -257,7 +257,7 @@ In Haskell this would be:
 ```haskell
 [ 3 ]  ++ [ x+1 | x <- xs ] ++ [ 4 ] ++ [ y | x <- xs, y <- [ x+2, 5 ]  ]
 ```
-However this breaks the (reasonable) rule for determining expressivity of a notation – _the comparison must only use one instance of the notation and no other ways of generating lists_. We’re comparing the expressivity of notations, not of Haskell and F#. Using the “++” operator is stepping outside the notation (just as an explicit call to List.sortBy or List.groupBy would be in your paper). And using multiple nested instances of the notation reveals weaker expressivity.
+However this breaks the (reasonable) rule for determining expressivity of a notation – _the comparison must only use one instance of the notation and no other ways of generating lists_. We’re comparing the expressivity of notations, not of Haskell and F#. Using the “++” operator is stepping outside the notation (just as an explicit call to List.sortBy or List.groupBy would be). And using multiple nested instances of the notation reveals weaker expressivity.
 
 Alternatively, consider a programming language where you _only_ had one instance of the notation and a few primitives like addition.  What functions can and can’t be written, and how many instances of the notation are needed?  That could be formulated as a precise technical question.
 
