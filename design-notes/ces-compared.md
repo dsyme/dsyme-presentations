@@ -7,7 +7,7 @@ leave comments or send feedback.
 F# computation expressions (CEs) are a syntactic de-sugaring of language elements like `for x in xs  ... ` to method calls like `For( ... )`
 on a builder object. They can be configured in many ways.  See also this extensive introduction to F# computation expressions.
 
-Many people coming to F# are familiar with Haskell, and in particular `list comprehension syntax` and `do notation`
+Many people coming to F# are familiar with Haskell, and in particular [list comprehension syntax](https://wiki.haskell.org/List_comprehension) and [do notation](https://en.wikibooks.org/wiki/Haskell/do_notation)
 (monad syntax) in Haskell.  In Haskell these are two separate syntactic mechanisms, both with limits in what they
 can express (we’ll discuss that later).  
 
