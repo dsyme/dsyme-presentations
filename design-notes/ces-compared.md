@@ -113,10 +113,10 @@ instances.  Here’s how the Haskell terminology maps across:
 This allows code like this:
 
 ```fsharp
-    async {
-       let! x = xs 
-       return x+x
-    }
+async {
+   let! x = xs 
+   return x+x
+}
 ```
 
 For monad syntax, there are additional optional elements to enrich the syntax. You can optionally have:
@@ -164,14 +164,14 @@ For those familiar with Haskell, it is natural to think of this as offering a sy
 This allows source syntax like this to be de-sugared:
 
 ```fsharp
-        seq {
-           yield "h"
-           for x in xs do 
-               yield "e"
-               if x > 3 then 
-                   yield "llo" + string x
-           yield "world"
-        }
+seq {
+   yield "h"
+   for x in xs do 
+       yield "e"
+       if x > 3 then 
+           yield "llo" + string x
+   yield "world"
+}
 ```
 
 This is what we call comprehension (or monoidal) syntax in F#. There are additional optional elements available to enrich the syntax for comprehension CEs. For example you can optionally have:
@@ -193,7 +193,7 @@ This is what we call comprehension (or monoidal) syntax in F#. There are additio
 For those familiar with Haskell list comprehensions, the F# equivalent of 
 
 ```fsharp
-    [ N | x <- L; y <- M ]  
+[ N | x <- L; y <- M ]  
 ```
 
 is
@@ -213,19 +213,19 @@ seq { for x in L do for y in M -> N }
 In either case it de-sugars to 
 
 ```fsharp
-    seq.For(L, (fun x -> seq.For(M, (fun y -> seq.Yield(N)))))
+seq.For(L, (fun x -> seq.For(M, (fun y -> seq.Yield(N)))))
 ```
 
 Expressivity of notation can be determined by comparing what functions can be implemented by, say, this in F#:
 
 ```fsharp
-    let f (xs: int list) = seq {  ...  }
+let f (xs: int list) = seq {  ...  }
 ```
 
 and the Haskell equivalent using only a list comprehension:
 
-```fsharp
-   f xs = [  ...  |  ...  ]
+```haskell
+f xs = [  ...  |  ...  ]
 ```
 
 where you can fill in the ` ... ` with whatever you like (except you aren’t allowed to call other list-generating constructs or library functions in there – not even [0 ... ] please).   
@@ -233,36 +233,36 @@ where you can fill in the ` ... ` with whatever you like (except you aren’t al
 For example, it’s my understanding there is no Haskell definition of the above restricted form that generates `3; (a1+1); ...  (an+1); 4; (a1+2); 5;  ... ; (an+2); 5 ` from input list `[ a1 ... an ]` . In F# the function is this:
 
 ```fsharp
-    let f (xs: int list) =
-        seq { yield 3
-              for x in xs do 
-                  yield (x+1)
-              yield 4 
-              for x in xs do
-                  yield (x+2)
-                  yield 5 }
+let f (xs: int list) =
+    seq { yield 3
+          for x in xs do 
+              yield (x+1)
+          yield 4 
+          for x in xs do
+              yield (x+2)
+              yield 5 }
 
-    f [ ] |> Seq.toList
-    // val it : int list = [3; 4]
+f [ ] |> Seq.toList
+// val it : int list = [3; 4]
 
-    f [ 100 ] |> Seq.toList
-    // val it : int list = [3; 101; 4]
+f [ 100 ] |> Seq.toList
+// val it : int list = [3; 101; 4]
 
-    f [ 100; 101 ] |> Seq.toList
-    //val it : int list = [3; 101; 102; 4; 102; 5; 103; 5]
+f [ 100; 101 ] |> Seq.toList
+//val it : int list = [3; 101; 102; 4; 102; 5; 103; 5]
 ```
 
-This is because in F# you can do additional things in comprehension notation beyond map/yield/filter, things
+This is because in F# you can do additional things (like "append") in comprehension notation beyond map/yield/filter, things
 which can’t be expressed using Haskell list comprehensions. 
 
 Here are some examples. First, we can insert if/then anywhere we like in the logic:
 
 ```fsharp
-    let f1 (xs: int list) (ys: int list)=
-        seq { for x in xs do 
-                 for y in ys do 
-                     if x > y then 
-                         yield x+y }
+let f1 (xs: int list) (ys: int list)=
+    seq { for x in xs do 
+             for y in ys do 
+                 if x > y then 
+                     yield x+y }
 // de-sugars to:
 // seq.For(xs, (fun x -> seq.For(xs, (fun y -> if x > y then seq.Yield(x+y) else seq.Empty))))
 ```
@@ -270,17 +270,17 @@ Here are some examples. First, we can insert if/then anywhere we like in the log
 This one does have an equivalent in Haskell list comprehensions using guards:
 
 ```fsharp
-    f1 xs = [ (x+y) | x <- xs, y <- ys, x > y ]
+f1 xs = [ (x+y) | x <- xs, y <- ys, x > y ]
 ```
 
 However, in F# you can sequence (i.e. `append`) two comprehensions to yield one sequence then another:
 
 ```fsharp
-    let f3 (xs: int list) (ys: int list) =
-        seq { for x in xs do 
-                 yield x+1 
-              for y in ys do 
-                 yield y+2 }
+let f3 (xs: int list) (ys: int list) =
+    seq { for x in xs do 
+             yield x+1 
+          for y in ys do 
+             yield y+2 }
 ```
 
 // de-sugars to:
@@ -289,15 +289,15 @@ However, in F# you can sequence (i.e. `append`) two comprehensions to yield one 
 Likewise, in F# you can use `if/then/else` and sequencing to alternately yield one or two elements:
 
 ```fsharp
-    let f4 (xs: int list) =
-        seq { for x in xs do 
-                 for y in xs do 
-                     if x > y then 
-                         yield x+1 
-                     else 
-                         yield x 
-                         yield 4 
-        }
+let f4 (xs: int list) =
+    seq { for x in xs do 
+             for y in xs do 
+                 if x > y then 
+                     yield x+1 
+                 else 
+                     yield x 
+                     yield 4 
+    }
 
 // de-sugars to:
 // seq.For(xs, (fun x -> seq.For(xs, (fun y -> if x > y then seq.Yield(x+1) else seq.Combine(seq.Yield(x), seq.Yield(4)))))))
