@@ -1,5 +1,5 @@
 
-# Why F# Computation Expressions unify and go beyond ‘do’ and list comprehension notation
+# Why F# Computation Expressions unify and go beyond 'do' notation and list comprehensions
 
 > Notes based on a discussion with Phillip Wadler, 10/01/2020. This document is a work in progress. Please
 leave comments or send feedback.
