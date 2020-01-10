@@ -8,16 +8,12 @@ F# computation expressions (CEs) are a syntactic de-sugaring of language element
 on a builder object. They can be configured in many ways.  See also this extensive introduction to F# computation expressions.
 
 Many people coming to F# are familiar with Haskell, and in particular [list comprehension syntax](https://wiki.haskell.org/List_comprehension) and [do notation](https://en.wikibooks.org/wiki/Haskell/do_notation)
-(monad syntax) in Haskell.  In Haskell these are two separate syntactic mechanisms, both with limits in what they
-can express (we’ll discuss that later).  
+(monad syntax).  In Haskell these are two separate syntactic mechanisms, with limits to what they
+can express (discussed that later).  
 
 In contrast, F# CEs are one syntactic mechanism that can be configured in different ways, including ways that cover
-the use cases of both list comprehensions and do notation, including additional things that can be expressed without
-"stepping outside the notation", plus other applications.
-
-For those coming from C#, F# CEs cover the use cases corresponding to four separate C# language features: C# enumerator
-methods, C# async methods, C# LINQ expressions and C# 8.0 async enumerator methods (as well as many other use cases).
-Comparing the expressivity of these is not covered in this doc.
+the use cases of both list comprehensions and do notation, and in each case can express additional things without
+"stepping outside the notation". There are also other applications for F# computation expressions.
 
 Below I’ll explain how to configure F# computation expressions for comprehensions (also called "monoid syntax"), and monadic
 syntax. There are some other possible configurations of F# computation expressions that are used in practice, briefly
@@ -31,6 +27,10 @@ This note is particularly aimed at explaining:
 
 -	why F# CEs for comprehensions de-sugar the `mapConcat/`bind` operation to the `for` notation rather than
 the `let!` (this can confuse people approaching F# CEs from the Haskell/monad `do-notation` perspective)
+
+For those coming from C#, F# CEs cover the use cases corresponding to four separate C# language features: C# enumerator
+methods, C# async methods, C# LINQ expressions and C# 8.0 async enumerator methods (as well as many other use cases).
+Comparing the expressivity of these is not covered in this doc.
 
 ## Overview of F# Computation Expressions
 
