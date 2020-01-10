@@ -2,7 +2,7 @@
 # Why F# Computation Expressions unify and go beyond 'do' notation and list comprehensions
 
 > Notes based on a discussion with Phillip Wadler, 10/01/2020. This document is a work in progress. Please
-leave comments or send feedback.
+leave comments or send feedback. I may have made mistakes, please send a PR to correct.
 
 F# computation expressions (CEs) are a syntactic de-sugaring of language elements like `for x in xs  ... ` to method calls like `For( ... )` on a builder object. They can be configured in many ways.  See also [this extensive introduction to F# computation expressions](https://fsharpforfunandprofit.com/posts/computation-expressions-intro/).
 
@@ -253,7 +253,15 @@ f [ 100; 101 ] |> Seq.toList
 This is because in F# you can do additional things (like "append") in comprehension notation beyond map/yield/filter, things
 which can’t be expressed using Haskell list comprehensions. 
 
-Here are some examples. First, we can insert if/then anywhere we like in the logic:
+In Haskell this would be:
+```haskell
+[ 3 ]  ++ [ x+1 | x <- xs ] ++ [ 4 ] ++ [ y | x <- xs, y <- [ x+2, 5 ]  ]
+```
+However this breaks the (reasonable) rule for determining expressivity of a notation – _the comparison must only use one instance of the notation and no other ways of generating lists_. We’re comparing the expressivity of notations, not of Haskell and F#. Using the “++” operator is stepping outside the notation (just as an explicit call to List.sortBy or List.groupBy would be in your paper). And using multiple nested instances of the notation reveals weaker expressivity.
+
+Alternatively, consider a programming language where you _only_ had once instance of the notation and a few primitives like addition.  What functions can and can’t be written, and how many instances of the notation are needed?  That could be formulated as a precise technical question.
+
+Here are some further examples. First, we can insert if/then anywhere we like in the logic:
 
 ```fsharp
 let f1 (xs: int list) (ys: int list)=
@@ -283,6 +291,7 @@ let f3 (xs: int list) (ys: int list) =
 // de-sugars to:
 // seq.Combine(seq.For(xs, (fun x -> seq.Yield(x+1))), seq.For(ys, (fun y -> seq.Yield(y+2))))
 ```
+In Haskell list comprehensions, this requires an explicit use of `++`.
 
 Likewise, in F# you can use `if/then/else` and sequencing to alternately yield one or two elements:
 
@@ -389,8 +398,6 @@ So far we’ve looked at two configurations of F# CEs.  They can be configured i
 - You can start using method overloading to allow "multi-type" computations that bind on related types.  For example, the F# `task` monad allows you to bind against C# tasks, F# async or C# "task-like" values.
 
 There are lots of possibilities, though they are may or may not be useful, it’s just a syntax de-sugaring. The approach of using a syntax mapping that can be reused in various ways comes from Haskell, LINQ and the LCF theorem provers, but the technical details differ extensively.
-
-I may have made mistakes, please send a PR to correct.
 
 A final comment: I think unifying and extending Haskell list/do-notation with full control syntax (either OCaml-style or Algol-style) which can be de-sugared may make an interesting project.  Or, to put it another way, there seems to be potential for a pure language which more natively supports a richer, customizable de-sugaring of data-generating control constructs.  A starting point may be to strip some existing notations out of Haskell and rebuild assuming either OCaml-style or Algol-style control constructs.
 
