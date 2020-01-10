@@ -25,12 +25,12 @@ summarized at the end.
 
 This note is particularly aimed at explaining:
 
--	why F# CEs are not `just` monad syntax;
+-	why F# CEs are not just monad syntax;
 
 -	why F# CEs are more (or differently) expressive than either Haskell `do` notation or Haskell list comprehensions
 
 -	why F# CEs for comprehensions de-sugar the `mapConcat/`bind` operation to the `for` notation rather than
-the `let!` (this is a common source of misunderstanding for people approaching F# CEs from the Haskell/monad `do-notation` perspective)
+the `let!` (this can confuse people approaching F# CEs from the Haskell/monad `do-notation` perspective)
 
 ## Overview of F# Computation Expressions
 
