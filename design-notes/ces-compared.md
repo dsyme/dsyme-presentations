@@ -1,5 +1,5 @@
 
-# Why F# Computation Expressions unify and go beyond 'do' notation and list comprehensions
+# F# Computation Expressions, 'do' notation and list comprehensions
 
 > Notes based on a discussion with Phillip Wadler, 10/01/2020. This document is a work in progress. Please
 leave comments or send feedback. I may have made mistakes, please send a PR to correct.
@@ -7,8 +7,7 @@ leave comments or send feedback. I may have made mistakes, please send a PR to c
 F# computation expressions (CEs) are a syntactic de-sugaring of language elements like `for x in xs  ... ` to method calls like `For( ... )` on a builder object. They can be configured in many ways.  See also [this extensive introduction to F# computation expressions](https://fsharpforfunandprofit.com/posts/computation-expressions-intro/).
 
 Many people coming to F# are familiar with Haskell, and in particular [list comprehension syntax](https://wiki.haskell.org/List_comprehension) and [do notation](https://en.wikibooks.org/wiki/Haskell/do_notation)
-(monad syntax).  In Haskell these are two separate syntactic mechanisms, with limits to what they
-can express (discussed that later).  
+(monad syntax).  In Haskell these are two separate syntactic mechanisms.
 
 In contrast, F# CEs are one syntactic mechanism that can be configured in different ways, including ways that cover
 the use cases of both list comprehensions and do notation, and in each case can express additional things without
@@ -29,6 +28,23 @@ the `let!` (this can confuse people approaching F# CEs from the Haskell/monad `d
 
 For those coming from C#, F# CEs cover the use cases corresponding to four separate C# language features: [C# enumerator/iterator methods](https://www.javatpoint.com/csharp-iterators), [C# async methods](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/), [C# LINQ expressions](https://docs.microsoft.com/en-us/dotnet/csharp/linq/) and [C# 8.0 async enumerator methods](https://dotnetcoretutorials.com/2019/01/09/iasyncenumerable-in-c-8/) (as well as many other use cases).
 Comparing the expressivity of these is not covered in this doc.
+
+There is an important aspect of Haskell methodology that is not covered in this note. Traditionally Haskell methodology
+has focused on identifying objects of semantic interest (e.g. "monads", meant semantically not syntactically), including
+semantic axioms that characterise these as closely as possible. In Haskell, type classes are defined that
+correspond to the operations for these objects, along with the (unchecked) equational properties
+expected of any instance of that type class. Finally, notation is added (e.g. do-notation) usable with
+any instance of the type class.  In this way of working, notation
+plays a secondary role to the semantic analysis, and "expressivity" focuses on the semantic theory of the objects of study,
+not the notation in the language, which may not even be needed at all.
+
+An important exception to this mode of analysis is Wadler and Peyton Jones' paper
+[Comprehensive Comprehensions](https://www.microsoft.com/en-us/research/wp-content/uploads/2007/09/list-comp.pdf) which
+"adds expressive power to comprehensions", i.e. adds expressive power to list notation, not to the semantics of lists.
+This paper (and my own discussions with Simon Peyton Jones during 2004-2010) had a significant influence on the
+development of F# CEs and the range of expression they needed to cover, and it is this notion of "expressivity of
+notation" that we're using here.
+
 
 ## Overview of F# Computation Expressions
 
