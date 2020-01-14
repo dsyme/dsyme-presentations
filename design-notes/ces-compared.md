@@ -21,9 +21,9 @@ This note is particularly aimed at explaining:
 
 -	why F# CEs are not just monad syntax;
 
--	why F# CEs are more (or differently) expressive than either Haskell `do` notation or Haskell list comprehensions
+-	why CEs are more (or differently) expressive than either traditional `do` notation or list comprehensions
 
--	why F# CEs for comprehensions de-sugar the `mapConcat`/`bind` operation to the `for` notation rather than
+-	why CEs for comprehensions de-sugar the `mapConcat`/`bind` operation to the `for` notation rather than
 the `let!` (this can confuse people approaching F# CEs from the Haskell/monad `do-notation` perspective)
 
 For those coming from C#, F# CEs cover the use cases corresponding to four separate C# language features: [C# enumerator/iterator methods](https://www.javatpoint.com/csharp-iterators), [C# async methods](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/), [C# LINQ expressions](https://docs.microsoft.com/en-us/dotnet/csharp/linq/) and [C# 8.0 async enumerator methods](https://dotnetcoretutorials.com/2019/01/09/iasyncenumerable-in-c-8/) (as well as many other use cases).
@@ -38,13 +38,16 @@ any instance of the type class.  In this way of working, notation
 plays a secondary role to the semantic analysis, and "expressivity" focuses on the semantic theory of the objects of study,
 not the notation in the language, which may not even be needed at all.
 
-An important exception to this mode of analysis is Wadler and Peyton Jones' paper
+An important exception to this way of working is Wadler and Peyton Jones' paper
 [Comprehensive Comprehensions](https://www.microsoft.com/en-us/research/wp-content/uploads/2007/09/list-comp.pdf) which
 "adds expressive power to comprehensions", i.e. adds expressive power to list notation, not to the semantics of lists.
 This paper (and my own discussions with Simon Peyton Jones during 2004-2010) had a significant influence on the
 development of F# CEs and the range of expression they needed to cover, and it is this notion of "expressivity of
 notation" that we're using here.
 
+Whether notational expressivity is of significance in the broader picture is largely a matter of emphasis and taste.
+My own personal experience as a programmer is that it matters greatly from a human usability perspective, especially when aligned with other ergonomic issues such as the ease with which code can be converted from "non-monadic" to "monadic" form (e.g. from synchronous to asynchronous). This is explored in [The F# Computation Expression Zoo](http://tomasp.net/academic/papers/computation-zoo/) and
+formed a key part of [Luca Bolognese's well-received 2008 presentation on F#](https://channel9.msdn.com/blogs/pdc2008/tl11).
 
 ## Overview of F# Computation Expressions
 
