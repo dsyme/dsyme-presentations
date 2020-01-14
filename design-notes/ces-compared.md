@@ -46,8 +46,8 @@ development of F# CEs and the range of expression they needed to cover, and it i
 notation" that we're using here.
 
 Whether notational expressivity is of significance in the broader picture is largely a matter of emphasis and taste.
-My own personal experience as a programmer is that it matters greatly from a human usability perspective, especially when aligned with other ergonomic issues such as the ease with which code can be converted from "non-monadic" to "monadic" form (e.g. from synchronous to asynchronous). This is explored in [The F# Computation Expression Zoo](http://tomasp.net/academic/papers/computation-zoo/) and
-formed a key part of [Luca Bolognese's well-received 2008 presentation on F#](https://channel9.msdn.com/blogs/pdc2008/tl11).
+My own personal experience as a programmer is that it matters greatly from a human usability perspective, especially when aligned with other ergonomic issues such as the ease with which code can be converted from "non-monadic" to "monadic" form (e.g. from synchronous to asynchronous). This is explored in [The F# Computation Expression Zoo](http://tomasp.net/academic/papers/computation-zoo/). The "ease of transition" of code forms a key part of [Luca Bolognese's well-received 2008 presentation on F#](https://channel9.msdn.com/blogs/pdc2008/tl11) and is also a major part of how both
+C# enumerator methods and C# async/await programming are presented to developer audiences.
 
 ## Overview of F# Computation Expressions
 
