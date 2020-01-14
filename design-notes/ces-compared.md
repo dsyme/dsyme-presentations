@@ -104,7 +104,7 @@ CE uses `let! x = xs in  ... ` for the binding.
 For those familiar with Haskell, it is natural to think of this as offering a syntax for `Monad`
 instances.  Here’s how the Haskell terminology maps across:
 
--	the Monad `bind` operation corresponds to the `let!` syntax mapping to the `Bind` method
+-	the Monad _bind_ (`>>=`) operation corresponds to the `let!` syntax mapping to the `Bind` method
 
 -	the Monad `return` operation corresponds to `return x` syntax mapping to the `Return` method
 
@@ -151,7 +151,7 @@ Note you have a `For` method.  The presence of the `For` method means `for x in 
 
 For those familiar with Haskell, it is natural to think of this as offering a syntax for things that in Haskell logically correspond to [`MonadPlus`](https://wiki.haskell.org/MonadPlus) instances.  Here’s how the Haskell terminology maps across:
 
-- In F#, the Haskell MonadPlus `bind` operation corresponds to the `for` syntax and is de-sugared to the `For` method
+- In F#, the Haskell MonadPlus _bind_ (`>>=`) operation corresponds to the `for` syntax and is de-sugared to the `For` method
 
 - The MonadPlus `mplus` operation corresponds to sequential composition `e1; e2` syntax (perhaps on two aligned lines with no semicolon), and is de-sugared to the `Combine` method
 
