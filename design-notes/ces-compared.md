@@ -369,7 +369,7 @@ seq { for db in ["Database1"; "Database2"] do
 //                    (fun () -> connection.Close())))
 ```
 
-As you can see from the above examples, F# computation expressions are a rich form of comprehension.  It isn’t possible to write all the above examples using Haskell list comprehensions without `stepping outside` the comprehension notation, e.g. making use of explicit calls to filter, concatenate, fixpoint, other list literals or other library constructs to generate lists/sequences.  There are no such explicit calls in the F# examples above (except the last, which uses a second list for the names of the databases)
+As you can see from the above examples, F# computation expressions are a rich form of comprehension.  It isn’t possible to write all the above examples using Haskell list comprehensions without "stepping outside" the comprehension notation, e.g. making use of explicit calls to filter, concatenate, fixpoint, other list literals or other library constructs to generate lists/sequences.  There are no such explicit calls in the F# examples above (except the last, which uses a second list for the names of the databases)
 
 ## Why F# Computation Expressions are more expressive than Haskell `do` notation
 
