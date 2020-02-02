@@ -164,7 +164,7 @@ Yield: T -> M<T>
 Zero: M<T>
 ```
 
-The minimum needed to warrant the name `comprehension` is `For` and `Yield`.  A `monoid` minimally needs `Yield`, `Combine` and `Zero`.
+The minimum needed to warrant the name `comprehension` is `For` and `Yield`.  A _monoidal_ comprehension minimally needs `Yield`, `Combine` and `Zero`. (See note below about the relationship to the mathematical notion of monoids.)
 
 Note you have a `For` method.  The presence of the `For` method means `for x in xs  ... ` is allowed in the syntax.   So your CE uses `for x in xs ... ` for binding. It does not use `let!` for binding. This is not being treated as a monad (let!), it’s being treated as a comprehension (for). There is no `Bind` method, there is no `let!` syntax, the `For` method takes its place.  
 
@@ -191,7 +191,11 @@ seq {
 }
 ```
 
-This is what we call comprehension (or monoidal) syntax in F#. There are additional optional elements available to enrich the syntax for comprehension CEs. For example you can optionally have:
+This is what we call comprehension (or monoidal) syntax in F#.
+
+Note that the monoidal syntax comes with stricter requirements than the mathematical notion of a _monoid_. In abstract algebra, a _monoid_ is an _associative binary operator with identity_. Compared to the required functions, the binary operator would be implemented by `Combine` and the identity by `Zero`. The associativity and identity laws can't be captured by F#'s type system (nor Haskell's, for that matter). The `Yield` requirement doesn't relate to the mathematical notion of a monoid, and neither does `For`. These instead belong to the notion of defining 'a monoid on monads'.
+
+There are additional optional elements available to enrich the syntax for comprehension CEs. For example you can optionally have:
 
 - `yield!` (YieldFrom : M<T> -> M<T>)
 
