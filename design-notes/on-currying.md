@@ -1,7 +1,7 @@
 
 # On Currying - 10/02/2020
 
-Over the weekend I was asked about the history/choices of the inclusion of currying and
+Over the weekend I was asked by Andy Gocke about the history/choices of the inclusion of currying and
 partial application in the F# design. Am happy to discuss, here's a quick note.
 
 First, from the historical perspective most of this comes in via F# <-- OCaml <-- Standard ML  <-- Edinburgh ML.
