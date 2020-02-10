@@ -1,7 +1,8 @@
 
 # On Currying - 10/02/2020
 
-Over the weekend I was asked about the history/choices of the inclusion of currying and partial application in the F# design. Am happy to discuss.
+Over the weekend I was asked about the history/choices of the inclusion of currying and
+partial application in the F# design. Am happy to discuss, here's a quick note.
 
 First, from the historical perspective most of this comes in via F# <-- OCaml <-- Standard ML  <-- Edinburgh ML.
 For raw core FP code (let, let let) the technical details are mostly the same as OCaml.
@@ -54,10 +55,56 @@ has quite stuck. I think if there were another pair of parentheses available to 
 Anyway, in the F# component design guidelines [we recommend against the use of currying](https://docs.microsoft.com/en-us/dotnet/fsharp/style-guide/component-design-guidelines#avoid-the-use-of-currying-of-parameters) in any
 object API design, trying to push it to be for implementation code only and a few functional
 programming idioms.   We also remove functions like “curry” and “uncurry” from the standard library.
-IIRC in Expert F# chapter 20 I also wrote a fair bit about this, suggesting that currying only be used
+IIRC in [Expert F#](https://www.apress.com/gp/book/9781484207413) chapter 20 I also wrote a fair bit about this, suggesting that currying only be used
 in limited circumstances when there is a bias amongst the arguments for which is likely to
 be “known” (unvarying) at callsites.  The onus is on the author of the function to predict
 this, but if it’s only being used in implementation code then that’s ok.
+
+Here's what I wrote in Expert F# 4.0:
+
+> ## Recommendation: Understand when currying is useful in functional programming APIs. 
+>
+> Currying is the name used when functions take arguments in the “iterated” form, that is, when the functions can be partially applied. For example, the following function is curried: 
+>
+>     let f x y z = x + y + z 
+>
+> This is not: 
+>
+>     let f (x,y,z) = x + y + z 
+>
+> Here are some of our guidelines for when to use currying and when not to use it: 
+>
+> *	Use currying freely for rapid prototyping and scripting. Saving keystrokes can be very useful in these situations. 
+>
+> *	Use currying when partial application of the function is highly likely to give a useful residual function (see Chapter 3). 
+>
+> *	Use currying when partial application of the function is necessary to permit useful precomputation (see Chapter 8).  
+>
+> *	Avoid using currying in vanilla .NET APIs or APIs to be used from other .NET languages. 
+>
+> When using currying, place arguments in order from the least varying to 
+> the most varying. This will make partial application of the function more
+> useful and lead to more compact code. For example, `List.map` is curried 
+> with the function argument first because a typical program usually applies
+> `List.map` to a handful of known function values but many different
+> concrete list values. Likewise, you saw in Chapters 8 and 9 how
+> recursive functions can be used to traverse tree structures. These
+> traversals often carry an environment. The environment changes
+> relatively rarely—only when you traverse the subtrees of
+> structures that bind variables. For this reason, the environment is the first argument.  
+>
+> When using currying, consider the importance of the pipelining
+> operator; for example, place function arguments first and object arguments last. 
+> 
+> F# also uses currying for let-bound binary operators and combinators: 
+>
+>     let divmod n m = ... 
+>
+>     let map f x = ... 
+> 
+>     let fold f z x = ... 
+> 
+> However, see Chapters 6 and 8 for how to define operators as static members in types, which are not curried. 
 
 As an aside it's noticeable that both currying and implicit/pervasive laziness are the FP
 techniques which are not moving from the Hindley-Milner into the Algol languages.
