@@ -16,7 +16,7 @@ viable function values.  As always an evolutionary approach was necessary, so I 
 with C# 1.x (leading to C# 2.0 and generics), and OCaml (leading to F# 1.0).   Once OCaml
 was a starting point currying and partial application are both “in”.
 
-I do comprehend your desire to see currying and partial application lose their hallowed status
+I do comprehend Andy's desire to see currying and partial application lose their hallowed status
 amongst FP aficionados. The basic criticism that it biases the last argument is valid.  There
 is also a valid criticism that it creates instability and irregularity in basic coding patterns,
 e.g. some team members using tupled arguments and some using curried arguments, even when basically
