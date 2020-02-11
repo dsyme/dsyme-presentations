@@ -1,5 +1,5 @@
 
-# On Currying - 10/02/2020
+# On Currying in F# - 10/02/2020
 
 Over the weekend I was asked by Andy Gocke about the history/choices of the inclusion of currying and
 partial application in the F# design. Am happy to discuss, here's a quick note.
@@ -32,8 +32,8 @@ OO notation it’s highly compact for a bunch of coding patterns and once it’s
 you kind of get used to it.  And once things like this get entrenched the rights and wrongs
 of the design principles don’t necessarily dominate – people just get used to particular notation.
 
-That said, I think you could in theory remove currying from F# and replace it by a design like
-the one you propose, characterised by something like
+That said, I think you could in theory remove currying and partial application from F# and replace it by a design which does
+away with partial application altogether, characterised by something like
 ```
     x.map { _ + 1 }
 ```
@@ -41,15 +41,16 @@ or
 ```
     x |> List.map { _ + x }
 ```
+Where all callsites are always saturated up and there is no partial application at all.
 
 A language like this would still look and feel much like modern F# code. That wouldn’t have
-been true for F# 1.x, but over time F# coding has developed its own stable style very distinct
-from OCaml etc. and the above would fit if it weren’t a breaking change.   So this is in theory
+been true for F# 0.x, but over time F# coding has developed its own stable style very distinct
+from OCaml etc. and the above would fit too badly if it weren’t a breaking change.   So this is in theory
 a reasonable, stable starting point for hybrid OO/FP languages and I wouldn’t be too surprised
 if it gradually becomes quite standard amongst languages somehow.  
 
 The technical problems with any mechanism like this are mostly with nesting and evaluation
-order (like cut/cute proposal for Schema). People float suggestions like this for F# but nothing
+order (like cut/cute proposal for Scheme). People float suggestions like this for F# but nothing
 has quite stuck. I think if there were another pair of parentheses available to us in ASCII we’d burn them on this.
 
 Anyway, in the F# component design guidelines [we recommend against the use of currying](https://docs.microsoft.com/en-us/dotnet/fsharp/style-guide/component-design-guidelines#avoid-the-use-of-currying-of-parameters) in any
@@ -109,4 +110,55 @@ Here's what I wrote in Expert F# 4.0:
 As an aside it's noticeable that both currying and implicit/pervasive laziness are the FP
 techniques which are not moving from the Hindley-Milner into the Algol languages.
 
+### Follow up - Function values, interop and the core "semantic" (de-sugared) forms of F# expressions
+
+For the core semantic de-sugared F# representation of expressions, things are effectively “System F + interop to .NET + interop to F# module/OO declarations”.  You can see the details in both F# quotations and [the F# TAST expression form](https://github.com/dotnet/fsharp/blob/e690e922d3ed6991e26e712fea76129bec0eb399/src/fsharp/tast.fs#L4699). Some details:
+
+#### Function values
+
+* A **curried local** `f0: int -> int -> int` has type `FSharpFunc<int,FSharpFunc<int,int>>`.  
+
+  * The arity of a local `f0` is not known statically (except perhaps in an optimization phase)
+  * Expression `f0` becomes `load f0`
+  * Expression `f0 e1` becomes `f0.Invoke(e1)`
+  * Expression `f0 e1 e2` becomes `f0.InvokeFast(e1, e2)` (actually a static method but that's by the by)
+
+  * NOTE: `f0.InvokeFast(e1,e2)` does  a hidden type test to check if it supports `OptimizedClosures.FSharpFunc<_,_,_>` (a two-curried-argument entry point), likewise 3, 4 etc.   At the closure-creation points when allocating `(fun x y -> ...)`, creating an instance of `OptimizedClosures.FSharpFunc<_,_,_>` for two-argument curried entry points `(fun x y -> …)` that have no side effect between the two arguments.  This means allocation-free calls to two-argument curried functions at the cost of a type test.   Looping code can make this explicit and lift out this check manually.
+
+* A **tupled local** `f1: int * int -> int` has static compiled type `FSharpFunc<Tuple<int,int>,int>`.  
+
+  * The arity of a local `f1` is not known statically (except perhaps in an optimization phase)
+  * Expression `f1` becomes `load f1`
+  * Expression `f1 e1` becomes `(load f1).Invoke(e1)`
+  * Expression `f1 (e1, e2)` becomes `(load f1).Invoke(Tuple(e1, e2))`
+  * There is no allocation-free call to such a function unless optimization learns something about `f1`
+
+#### Function declarations in a module
+
+* The compiled form of a **curried function declaration in a module**  `let f2 x y = x + y` is `public static int CompileNameOfF2(int x, int y) { .. }`
+
+  * The arity of `f2` is known statically to be `[1;1]`
+  * Expression `f2` becomes `fun v1 v2 -> CompileNameOfF2(v1,v2)`
+  * Expression `f2 e1` becomes `let v1 = e1 in (fun v2 -> CompileNameOfF2(v1,v2)`
+  * Expression `f2 e1 e2` becomes `CompileNameOfF2(e1,e2)`
+
+* The compiled form of a **tupled function declaration in a module** `let f3 (x, y) = x + y` is also `public static int CompileNameOfF3(int x, int y) { .. }`
+
+  * The arity of `f3` is known statically to be `[2]`
+  * Expression `f3` becomes `fun v1 v2 -> CompileNameOfF3(v1,v2)`
+  * Expression `f3 e1` becomes `let (v1, v2) = e1 in CompileNameOfF3(v1,v2)`
+  * Expression `f3 (e1, e2)` becomes `CompileNameOfF3(e1,e2)`
+
+#### .NET interop calls
+
+* Assume .NET compiled form `static int C::StaticMethod(int x, int y)=`
+
+  * The arity of `C.StaticMethod` is known at all callsites
+  * Expression `C.StaticMethod` becomes `fun p -> let (v1, v2) = p in C::StaticMethod(v1,v2)`, i.e. first-class uses of .NET methods are considered to take a single tupled argument.
+  * Expression `C.StaticMethod(e1)` is actually disallowed but if it were allowed it would become `let (v1,v2) = e1 in C::StaticMethod(v1, v2)`
+  * Expression `C.StaticMethod(e1,e2)` becomes `C::StaticMethod(e1, e2)`
+  
+Overall the “module/OO/interop” parts of F# are about approximating the “illusion of uniformity” over the sea of non-uniform declaration-level constructs (classes, modules, functions, methods, properties, .NET interop, type providers, “void”, generics, …)  and lifting these into a uniform expression level. 
+
 Lots more could be said but that's the basics.  
+
