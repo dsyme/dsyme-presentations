@@ -1,3 +1,4 @@
+(Please submit PRs if you spot mistakes or would like to add a substantive comment)
 
 # On Currying in F# - 10/02/2020
 
@@ -7,7 +8,8 @@ partial application in the F# design. Am happy to discuss, here's a quick note.
 First, from the historical perspective most of this comes in via F# <-- OCaml <-- Standard ML  <-- Edinburgh ML.
 For raw core FP code (let, let let) the technical details are mostly the same as OCaml.
 There are a lot of extra details about how the mechanism works w.r.t. object programming,
-subsumption, quotations and the compiled form of curried functions but we can skip those for now.
+subsumption and quotations but we can skip those for now.  I've added a note on and the compiled form of curried and
+tupled functions values and declarations at the end of this note.
 
 At the time F# 1.x was designed (2002-2004) the strongly-typed starting points we had were
 Java, C# 1.x, OCaml, Standard ML and Haskell.  There was no real integration of OO and FP
