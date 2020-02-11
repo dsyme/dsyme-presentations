@@ -123,7 +123,8 @@ For the core semantic de-sugared F# representation of expressions, things are ef
   * The arity of a local `f0` is not known statically (except perhaps in an optimization phase)
   * Expression `f0` becomes `load f0`
   * Expression `f0 e1` becomes `f0.Invoke(e1)`
-  * Expression `f0 e1 e2` becomes `f0.InvokeFast(e1, e2)` (actually a static method but that's by the by)
+  * Expression `f0 e1 e2` becomes `f0.InvokeFast(e1, e2)` (actually a static method `FSharpFunc::InvokeFast(f0,e1,e2)` but that's by the by)
+  * NOTE: This follows OCaml in evaluating `e1` and `e2` before making the call.  Thus there is a distinction between `(f0 e1) e2` and `f0 e1 e2`.  THe former becomes `(f0.Invoke(e1)).Invoke(e2)` in the absence of any optimization information about `f0`.
 
   * NOTE: `f0.InvokeFast(e1,e2)` does  a hidden type test to check if it supports `OptimizedClosures.FSharpFunc<_,_,_>` (a two-curried-argument entry point), likewise 3, 4 etc.   At the closure-creation points when allocating `(fun x y -> ...)`, creating an instance of `OptimizedClosures.FSharpFunc<_,_,_>` for two-argument curried entry points `(fun x y -> …)` that have no side effect between the two arguments.  This means allocation-free calls to two-argument curried functions at the cost of a type test.   Looping code can make this explicit and lift out this check manually.
 
@@ -150,6 +151,8 @@ For the core semantic de-sugared F# representation of expressions, things are ef
   * Expression `f3` becomes `fun v1 v2 -> CompileNameOfF3(v1,v2)`
   * Expression `f3 e1` becomes `let (v1, v2) = e1 in CompileNameOfF3(v1,v2)`
   * Expression `f3 (e1, e2)` becomes `CompileNameOfF3(e1,e2)`
+
+I'll skip function declarations in classes but suffice to say they typically become instance methods.
 
 #### .NET interop calls
 
