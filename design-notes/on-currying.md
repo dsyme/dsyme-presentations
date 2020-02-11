@@ -5,7 +5,7 @@
 Over the weekend I was asked by Andy Gocke about the history/choices of the inclusion of currying and
 partial application in the F# design. Am happy to discuss, here's a quick note.
 
-First, from the historical perspective most of this comes in via F# <-- OCaml <-- Standard ML  <-- Edinburgh ML.
+First, from the historical perspective most of this comes in via F# <-- OCaml <-- Edinburgh ML.
 For raw core FP code (let, let let) the technical details are mostly the same as OCaml.
 There are a lot of extra details about how the mechanism works w.r.t. object programming,
 subsumption and quotations but we can skip those for now.  I've added a note on and the compiled form of curried and
