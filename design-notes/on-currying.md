@@ -112,7 +112,7 @@ Here's what I wrote in Expert F# 4.0:
 As an aside it's noticeable that both currying and implicit/pervasive laziness are the FP
 techniques which are not moving from the Hindley-Milner into the Algol languages.
 
-### Follow up - Function values, interop and the core "semantic" (de-sugared) forms of F# expressions
+### Appendix: Function values, interop and the core "semantic" (de-sugared) forms of F# expressions
 
 For the core semantic de-sugared F# representation of expressions, things are effectively “System F + interop to .NET + interop to F# module/OO declarations”.  You can see the details in both F# quotations and [the F# TAST expression form](https://github.com/dotnet/fsharp/blob/e690e922d3ed6991e26e712fea76129bec0eb399/src/fsharp/tast.fs#L4699). Some details:
 
