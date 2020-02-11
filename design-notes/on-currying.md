@@ -26,11 +26,11 @@ all code is first order.  You can see this play out in F# code in practice, and 
 flipping between these when there are many parameters involved.
 
 One problem with the “it biases the last parameter” argument is that a similar criticism can be made
-for OO programming (“it biases the first parameter”) and yet that proves perfectly effective in
+for object programming notation (“it biases the first parameter”) and yet that proves perfectly effective in
 practice. Further once you have syntactic mechanisms for the first and last parameters you’ve
 covered most call-sites, and there’s a process of diminishing returns.  This helps explain why
 currying is so persistently present in Haskell, OCaml, Elm,  PureScript and so on – like
-OO notation it’s highly compact for a bunch of coding patterns and once it’s in your toolbox
+object programming notation it’s highly compact for a bunch of coding patterns and once it’s in your toolbox
 you kind of get used to it.  And once things like this get entrenched the rights and wrongs
 of the design principles don’t necessarily dominate – people just get used to particular notation.
 
