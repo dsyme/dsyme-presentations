@@ -81,7 +81,7 @@ Here's what I wrote in Expert F# 4.0:
 >
 > *	Use currying when partial application of the function is highly likely to give a useful residual function (see Chapter 3). 
 >
-> *	Use currying when partial application of the function is necessary to permit useful precomputation (see Chapter 8).  
+> *	Use currying when partial application of the function is necessary to permit useful precomputation (see Chapter 8).  [ NOTE: however, the partial-application-for-precomputation design pattern should rarely be used in F# coding, if ever ]
 >
 > *	Avoid using currying in vanilla .NET APIs or APIs to be used from other .NET languages. 
 >
