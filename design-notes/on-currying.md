@@ -1,4 +1,4 @@
-(Please submit PRs if you spot mistakes or would like to add a substantive comment)
+(Please submit PRs if you spot mistakes or would like to add a substantive comment, or [chitty-chat on the twitter thread](https://twitter.com/dsymetweets/status/1227211129522413580))
 
 # On Currying in F# - 10/02/2020
 
