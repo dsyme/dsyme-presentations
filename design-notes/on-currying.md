@@ -11,7 +11,7 @@ There are a lot of extra details about how the mechanism works w.r.t. object pro
 subsumption and quotations but we can skip those for now.  I've added a note on and the compiled form of curried and
 tupled functions values and declarations at the end of this note.
 
-At the time F# 1.x was designed (2002-2004) the strongly-typed starting points we had were
+[At the time F# 1.0 was designed (2002-2005)](https://fsharp.org/history) the strongly-typed starting points we had were
 Java, C# 1.x, OCaml, Standard ML and Haskell.  There was no real integration of OO and FP
 available – not even Scala – just prototypes like Pizza/GJ – and C# 1.x didn’t even have
 viable function values.  As always an evolutionary approach was necessary, so I started
@@ -19,7 +19,7 @@ with C# 1.x (leading to C# 2.0 and generics), and OCaml (leading to F# 1.0).   O
 was a starting point currying and partial application are both “in”.
 
 I do comprehend Andy's desire to see currying and partial application lose their hallowed status
-amongst FP aficionados. The basic criticism that it biases the last argument is valid.  There
+amongst strongly-typed FP aficionados. The basic criticism that it biases the last argument is valid.  There
 is also a valid criticism that it creates instability and irregularity in basic coding patterns,
 e.g. some team members using tupled arguments and some using curried arguments, even when basically
 all code is first order.  You can see this play out in F# code in practice, and I find myself
