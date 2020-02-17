@@ -252,7 +252,8 @@ let result = ResultBuilder()
 One of the hardest decisions in designing an applicative CE (i.e. one that supports `MergeSources`, `BindReturn` and potentially other CE constructs) is whether the CE builder should also define a `Bind` method.
 
 If the builder does define `Bind`, your users can very easily write code that has
-low performance. RCF FS-1063 contains one example. As another example, the code
+low performance. RCF FS-1063 contains one example. As another example, if the user defines `Bind`
+the following code will compile:
 
 ```fsharp
 let readCustomer() =
