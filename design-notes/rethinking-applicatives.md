@@ -72,8 +72,8 @@ let res0 =
 
 ```
 Here, the types are simpler and the code is not too hard to follow for any F# user familiar with `||>` and `|||>`.
-Further there is no need to define the separate `myfunction` to process the results.  THere is nothing wrong with the code
-above and it is very natural.
+Further there is no need to define the separate `myfunction` to process the results.  There is little wrong with the code
+above and it is often very natural.
 
 
 ## Style C: Applicatives With FS-1063
