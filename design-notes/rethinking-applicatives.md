@@ -51,7 +51,7 @@ The negatives here are:
 1. The technique relies on knowledge that `myfunction` is a curried function and `myfunction <!> resultValue1` is a partial application.
 
 2. The technique relies on defining a new function `myfunction` to build the overall result of processing the inputs.
-   This is, by design, a curried tunction and the order of "combination" of `myfunction` really matters, so if for example you write `myfunction <!> resultValue1 <*> resultValue3 <*> resultValue2`
+   This is, by design, a curried function and the order of "combination" of `myfunction` really matters, so if for example you write `myfunction <!> resultValue1 <*> resultValue3 <*> resultValue2`
    by mistake you get the wrong result. The error is syntactically distant from the `a + b - c` code which helps
    us undertstand it as an error.
 
