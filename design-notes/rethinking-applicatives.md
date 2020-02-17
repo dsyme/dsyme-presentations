@@ -6,7 +6,7 @@ At [the F# London meetup](https://www.meetup.com/FSharpLondon/events/268194013/)
 for data processing and validation in the context of AWS cloud programming ([content](https://github.com/blair55/fsharp-dynamo-db-slides)). As part of
 a cooperative follow-up, I thought it would be cool if those of us in the London F# community use this
 as a practical sample to proof a new technique that will become available in [F# 5.0](https://gist.github.com/cartermp/6b91c3561c6a5efca4288dca37c15edc). The aim is
-to simplify this kind of code even further than before.
+to simplify this kind of code even further than before. 
 
 Applicatives can be seen as a way of combining computation elements together "statically" - in the sense that
 all combination can be done as a pre-phase, prior to using the resulting computation. Often many optimization steps can be applied
@@ -170,6 +170,11 @@ So, once FS-1063 is available I strongly prefer that the F# community orient tow
 Style B (if no computation expressions are used) and Style C (when computation expressions are used).  In particular
 I'd like to see `apply` functions slowly disappear from the F# universe in favour of the other
 techniques.
+
+## Thank you
+
+A big shout out to Tom Davies ([@TD5](https://github.com/TD5)), Nicholas Cowle and the major F# users [G-Research](https://twitter.com/GRESEARCHjobs) who did the first prototype of FS-1063 - a great community-initiated contribution to the F# language. 
+
 
 ## Appendix: Trialling FS-1063 today 
 
