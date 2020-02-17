@@ -12,11 +12,12 @@ during this phase.  For example, in [RFC FS-1063](https://github.com/fsharp/fsla
 there is an example of graph building that shows a 10000x speedup difference (really, `O(N)` to `O(1)`) when using applicatives
 for defining computation graph nodes, rather than using monadic binding.
 
-For applicatives, F# code today  is often characterized by the operators `<!>` and `<*>`.
 In this post I will explain why, once [RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/RFCs/FS-1063-support-letbang-andbang-for-applicative-functors.md)
-is available and out of "preview", I would like to see it adopted as a standard way of writing applicatives in F#.
-Further, I'd like to see the `<!>` and `<*>` patterns "eventually" removed (or greatly minimized) in F# usage, though
-I understand it will take a while for this to happen.
+is available and out of "preview", I would like to see it become a standard way of writing applicatives in F#.
+
+For applicatives, F# code today  is often characterized by the operators `<!>` and `<*>`.
+One RFC FS-1063 becomes widely available I'd like to see the `<!>` and `<*>` patterns
+eventually removed or minimized in common F# usage, though I understand it will take a while for this to happen.
 
 As a running example, let's use these three `Result` values:
 ```fsharp
