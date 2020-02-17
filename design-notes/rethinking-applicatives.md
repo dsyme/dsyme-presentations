@@ -17,10 +17,12 @@ for defining computation graph nodes, rather than using monadic binding.
 In this post I will explain why, once [RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/RFCs/FS-1063-support-letbang-andbang-for-applicative-functors.md)
 is available and out of "preview", I would like to see it become a standard way of writing applicatives in F#.
 
-For applicatives, F# code today  is often characterized by the operators `<!>` and `<*>`.
+For applicatives, F# code today  is often characterized by the operators `<!>` and `<*>`, called "Style A" below.
 One RFC FS-1063 becomes widely available I'll admit I'd like to see the `<!>` and `<*>` patterns
 eventually removed or minimized in common F# usage, though I understand it will take a while for this to happen.
-If you like this post can be read as "apply considered harmful" - though not applicatives.
+If you like this post can be read as "apply considered harmful" - though not applicatives themselves.
+That said, I can absolutely see why "Style A" is in common use in F# today, as for some use cases the positives
+outweight the negatives.
 
 As a running example, let's use these three `Result` values:
 ```fsharp
@@ -87,11 +89,11 @@ the above code are
 
 1. You need more and more operators `||||||>` etc.
 
-2. The associations `resultValue1` <-> `v1` etc. depending on matching up argument position, and when there are 10 or 20
-   things involved that's going to be a problem and a source of subtle mistakes.
+2. The associations `resultValue1` <-> `v1` etc. depend on argument position across a curried functional operator
+   When there are 10 or 20 things involved that'sa problem, and potentially a source of subtle mistakes.
 
-That said in many contexts the above is quite natural.  I've found it natural and useful in dependency graph programming
-with [FSharp.Data.Adaptive](https://github.com/fsprojects/FSharp.Data.Adaptive), for example.
+That said in many contexts Style B is quite natural.  For example I've found it natural and useful in dependency graph programming
+with [FSharp.Data.Adaptive](https://github.com/fsprojects/FSharp.Data.Adaptive).
 
 ## Style C: Applicatives With FS-1063
 
