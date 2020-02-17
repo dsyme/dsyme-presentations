@@ -25,7 +25,7 @@ let resultValue1 = Ok 2
 let resultValue2 = Ok 3 // or: Error "fail!"
 let resultValue3 = Ok 4
 ```
-Our job is to process these up to produce a new `Result` value `Ok (2  + 3 - 4)` = `Ok 1`.
+Our job is to process these up to produce a new `Result` value `Ok (2  + 3 - 4)` = `Ok 1` (or `Error "fail"` if the commented out code is enabled).
 
 ## Style A: Applicatives with `map` and `apply`
 
