@@ -18,8 +18,9 @@ In this post I will explain why, once [RFC FS-1063](https://github.com/fsharp/fs
 is available and out of "preview", I would like to see it become a standard way of writing applicatives in F#.
 
 For applicatives, F# code today  is often characterized by the operators `<!>` and `<*>`.
-One RFC FS-1063 becomes widely available I'd like to see the `<!>` and `<*>` patterns
+One RFC FS-1063 becomes widely available I'll admit I'd like to see the `<!>` and `<*>` patterns
 eventually removed or minimized in common F# usage, though I understand it will take a while for this to happen.
+If you like this post can be read as "apply considered harmful" - though not applicatives.
 
 As a running example, let's use these three `Result` values:
 ```fsharp
@@ -29,7 +30,7 @@ let resultValue3 = Ok 4
 ```
 Our job is to process these up to produce a new `Result` value `Ok (2  + 3 - 4)` = `Ok 1` (or `Error "fail"` if the commented out code is enabled).
 
-## Style A: Applicatives with `map` and `apply`
+## Style A: Applicatives with `apply`
 
 Prior to F# 5.0 RFC FS-1063, a functional encoding of applicatives is generally used, e.g
 ```fsharp
