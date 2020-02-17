@@ -88,6 +88,10 @@ let res1 =
 Here `let! ... and! ...` is understood as "merge the sources on the right and bind them simultaneously". The code
 the library defines is shown at the end of this post.
 
+The deugared code effectively uses `Result.zip` and `Result.map`.
+An optimized version can just use `Result.map3`. See the note at the end for the de-sugaring and computation expression
+builder definition.
+
 Note that no `Result.apply` is defined at all, and in this case there is also no
 `Result.bind`.  Only applicatives can be written with the above computation expression builder.
 
@@ -238,7 +242,7 @@ is equivalent to
 let res1 =
     result.BindReturn(result.MergeSources(resultValue1, resultValue2, resultValue3), fun (a,b,c) -> a + b - c)
 ```
-Through the addition of a `Bind3Return` method the computation can be reduced to
+Through the addition of a `Bind3Return` method (i.e. `Result.map3`) the computation can be reduced to
 ```fsharp
 result.Bind3Return(resultValue1, resultValue2, resultValue3, fun a b c -> a + b - c)
 ```
