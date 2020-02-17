@@ -63,6 +63,16 @@ The negatives here are:
 
 6. The 'apply' operator can be somewhat mind-bending to even experienced F# developers.
 
+Some positives are:
+
+1. The style is visually quite declarative
+
+2. It emphasises compositionality
+
+3. It's available for use since F# 0.1
+
+4. It doesn't suffer the negatives of Style B below
+
 ## Style B: Applicatives with `map2`, `map3`, ...
 
 An alternative encoding of applicatives is sometimes used via `map2`, `map3` etc., e.g
