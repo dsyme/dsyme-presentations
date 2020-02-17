@@ -171,7 +171,7 @@ Style B (if no computation expressions are used) and Style C (when computation e
 I'd like to see `apply` functions slowly disappear from the F# universe in favour of the other
 techniques.
 
-## Trialling FS-1063 today 
+## Appendix: Trialling FS-1063 today 
 
 FS-1063 is only in preview.  If you are programming with applicatives I'd strongly encourage
 you to try it out today. For example, we may be able to greatly improve the error messages to guide the
