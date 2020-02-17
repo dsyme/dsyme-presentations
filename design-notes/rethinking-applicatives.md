@@ -1,7 +1,7 @@
 # Rethinking Applicatives in F#
 
 At [the F# London meetup](https://www.meetup.com/FSharpLondon/events/268194013/) on Thursday [Nick Blair](https://twitter.com/NickBlair) gave a fabulous talk on using the functional design pattern called "applicatives"
-for data processing and validation in the context of AWS cloud programming ([content](https://github.com/blair55/fsharp-dynamo-db-slides). As part of
+for data processing and validation in the context of AWS cloud programming ([content](https://github.com/blair55/fsharp-dynamo-db-slides)). As part of
 a cooperative follow-up, I thought it would be cool if those of us in the London F# community use this
 as a practical sample to proof a new technique that will become available in F# 5.0. The aim is
 to simplify this kind of code even further than before.
