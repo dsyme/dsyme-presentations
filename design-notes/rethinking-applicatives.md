@@ -47,7 +47,6 @@ The code the library defines is shown at the end of this post.
 The negatives here are:
 
 1. The technique relies on knowledge that `myfunction` is a curried function and `myfunction <!> resultValue1` is a partial application.
-   The types involved are quite subtle.
 
 2. The technique relies on defining a new function `myfunction` to build the overall result of processing the inputs.
    This is, by design, a curried tunction and the order of "combination" of `myfunction` really matters, so if for example you write `myfunction <!> resultValue1 <*> resultValue3 <*> resultValue2`
@@ -58,7 +57,11 @@ The negatives here are:
    type conflicts normally occur between different variations of these (or else people turn to the hyper-generic
    libraries like "FSharpPlus").  If locally defined then the code can easily tend towards the obscure.
 
-4. The 'apply' operator is somewhat mind-bending to even experienced F# developers.
+4. The user must understand the precedence of `<!>` and `<*>`.
+
+5. The types involved are quite subtle. When hovering over `<!>` you'll see type parameters instantiated to long chains of curried parameter types.
+
+6. The 'apply' operator can be somewhat mind-bending to even experienced F# developers.
 
 ## Style B: Applicatives with `map2`, `map3`, ...
 
