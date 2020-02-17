@@ -247,7 +247,45 @@ type ResultBuilder() =
 let result = ResultBuilder()
 ```
 
-## Appendix: on performance with FS-1063
+## Appendix: Should Applicative CEs also define 'Bind'?
+
+One of the hardest decisions in designing an applicative CE (i.e. one that supports `MergeSources`, `BindReturn` and potentially other CE constructs) is whether the CE builder should also define a `Bind` method.
+
+If the builder does define `Bind`, your users can very easily write code that has
+low performance. RCF FS-1063 contains one example. As another example, the code
+
+```fsharp
+let readCustomer() =
+
+  attrReader { 
+      let! id       = guidAttrReader    "id"
+      let! email    = stringAttrReader  "email"
+      let! verified = boolAttrReader    "verified"
+      let! dob      = dateAttrReader    "dob"
+      let! balance  = decimalAttrReader "balance"
+      return 
+          { Id = id 
+            Email = email
+            IsVerified = verified 
+            DateOfBirth = dob 
+            Balance = balance } 
+  }
+```
+will by its nature be of lower performance - perhaps drastically so - since the creation of the readers will be repeated
+on each step every time the actual read is performed.  Further, no warning will
+be given that `and!` can be used here (because the first five computations are independent).
+
+The simplest solution to this is simply to not have a `Bind`.  Alternatively, you can define two CEs:
+
+* `attrReader { ... }` without a `Bind`, for attribute readers whose compositions are effectively known statically (non data-dependent, non-parametric). 
+
+* `attrReaderDynamic { ... } ` with a `Bind`, for attribute readers whose compositions are both data-dependent and non-parametric.
+
+Alternatively, you can support a `Bind` and leave the user to decide.
+
+Similar care must be taken when adding other semantics such as `TryFinally`, `TryWith`, `While`, `For` and so on.
+
+## Appendix: On performance with FS-1063
 
 In the above example, the computation
 ```fsharp
