@@ -165,7 +165,7 @@ To use the preview bits, at the time of posting I did the following:
 This will be simpler when the next preview release of Visual Studio comes out (please submit a PR if there is an easier way to use the preview bits)
 
 
-## Library Code for Style A
+## Appendix: Library Code for Style A
 
 For Style A the library defines:
 ```fsharp
@@ -180,7 +180,7 @@ let (<!>) f x = Result.map f x
 let (<*>) f x = Result.apply f x
 ```
 
-## Library Code for Style B
+## Appendix: Library Code for Style B
 
 For Style B the library defines:
 ```fsharp
@@ -200,7 +200,7 @@ module Result =
 
 ```
 
-## Library Code for Style C
+## Appendix: Library Code for Style C
 
 For Style C the library defines:
 ```fsharp
