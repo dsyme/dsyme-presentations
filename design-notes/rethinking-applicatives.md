@@ -31,24 +31,16 @@ Our job is to process these up to produce a new `Result` value `Ok (2  + 3 - 4)`
 
 Prior to F# 5.0 RFC FS-1063, a functional encoding of applicatives is generally used, e.g
 ```fsharp
+let (<!>) f x = Result.map f x
+let (<*>) f x = Result.apply f x
+
 let myfunction (a:int) (b:int) (c:int) =
     a + b - c
 
 let res0 =
     myfunction <!> resultValue1 <*> resultValue2 <*> resultValue3
 ```
-where the library defines:
-```
-module Result = 
-    let apply f x = 
-        match f,x with
-        | Ok fres, Ok xres -> Ok (fres xres)
-        | Error e, _ -> Error e
-        | _, Error e -> Error e
-
-let (<!>) f x = Result.map f x
-let (<*>) f x = Result.apply f x
-```
+The code the library defines is shown at the end of this post.
 The negatives here are:
 
 1. The technique relies on knowledge that `myfunction` is a curried function and `myfunction <!> resultValue1` is a partial application.
@@ -73,23 +65,6 @@ let res0 =
     (resultValue1, resultValue2, resultValue3) |||> Result.map3 (fun v1 v2 v3 -> v1 + v2 - v3)
 
 ```
-where the library defines:
-```fsharp
-module Result = 
-    let map2 f x1 x2 = 
-        match x1,x2 with
-        | Ok x1res, Ok x2res -> Ok (f x1res x2res)
-        | Error e, _ -> Error e
-        | _, Error e -> Error e
-
-    let map3 f x1 x2 x3 = 
-        match x1,x2,x3 with
-        | Ok x1res, Ok x2res, Ok x3res -> Ok (f x1res x2res x3res)
-        | Error e, _, _ -> Error e
-        | _, Error  e, _ -> Error e
-        | _, _, Error e -> Error e
-
-```
 Here, the types are simpler and the code is not too hard to follow for any F# user familiar with `||>` and `|||>`.
 Further there is no need to define the separate `myfunction` to process the results.  THere is nothing wrong with the code
 above and it is very natural.
@@ -107,31 +82,8 @@ let res1 =
         return a + b - c 
     }
 ```
-Here `let! ... and! ...` is understood as "merge the sources on the right and bind them simultaneously". The library defines:
-```fsharp
-module Result = 
-    let zip x1 x2 = 
-        match x1,x2 with
-        | Ok x1res, Ok x2res -> Ok (x1res, x2res)
-        | Error e, _ -> Error e
-        | _, Error e -> Error e
-
-type ResultBuilder() = 
-    member _.MergeSources(t1: Result<'T,'U>, t2: Result<'T1,'U>) = Result.zip t1 t2
-    member _.BindReturn(x: Result<'T,'U>, f) = Result.map f x
-
-let result = ResultBuilder()
-```
-The computation is equivalent to
-```fsharp
-```fsharp
-result.BindReturn(result.MergeSources(resultValue1, resultValue2, resultValue3), fun (a,b,c) -> a + b - c)
-```
-Additionally, through the addition of a `Bind3Return` method the computation can be reduced to
-```fsharp
-result.Bind3Return(resultValue1, resultValue2, resultValue3, fun a b c -> a + b - c)
-```
-and highly efficient code can be generated.
+Here `let! ... and! ...` is understood as "merge the sources on the right and bind them simultaneously". The code
+the library defines is shown at the end of this post.
 
 Note that no `Result.apply` is defined at all, and in this case there is also no
 `Result.bind`.  Only applicatives can be written with the above computation expression builder.
@@ -212,4 +164,80 @@ To use the preview bits, at the time of posting I did the following:
 
 This will be simpler when the next preview release of Visual Studio comes out (please submit a PR if there is an easier way to use the preview bits)
 
+
+## Library Code for Style A
+
+For Style A the library defines:
+```fsharp
+module Result = 
+    let apply f x = 
+        match f,x with
+        | Ok fres, Ok xres -> Ok (fres xres)
+        | Error e, _ -> Error e
+        | _, Error e -> Error e
+
+let (<!>) f x = Result.map f x
+let (<*>) f x = Result.apply f x
+```
+
+## Library Code for Style B
+
+For Style B the library defines:
+```fsharp
+module Result = 
+    let map2 f x1 x2 = 
+        match x1,x2 with
+        | Ok x1res, Ok x2res -> Ok (f x1res x2res)
+        | Error e, _ -> Error e
+        | _, Error e -> Error e
+
+    let map3 f x1 x2 x3 = 
+        match x1,x2,x3 with
+        | Ok x1res, Ok x2res, Ok x3res -> Ok (f x1res x2res x3res)
+        | Error e, _, _ -> Error e
+        | _, Error  e, _ -> Error e
+        | _, _, Error e -> Error e
+
+```
+
+## Library Code for Style C
+
+For Style C the library defines:
+```fsharp
+module Result = 
+    let zip x1 x2 = 
+        match x1,x2 with
+        | Ok x1res, Ok x2res -> Ok (x1res, x2res)
+        | Error e, _ -> Error e
+        | _, Error e -> Error e
+
+type ResultBuilder() = 
+    member _.MergeSources(t1: Result<'T,'U>, t2: Result<'T1,'U>) = Result.zip t1 t2
+    member _.BindReturn(x: Result<'T,'U>, f) = Result.map f x
+
+let result = ResultBuilder()
+```
+
+## Appendix: on performance with FS-1063
+
+In the above example, the computation
+```fsharp
+let res1 =
+    result { 
+        let! a = resultValue1 
+        and! b = resultValue2
+        and! c = resultValue3
+        return a + b - c 
+    }
+```
+is equivalent to
+```fsharp
+let res1 =
+    result.BindReturn(result.MergeSources(resultValue1, resultValue2, resultValue3), fun (a,b,c) -> a + b - c)
+```
+Through the addition of a `Bind3Return` method the computation can be reduced to
+```fsharp
+result.Bind3Return(resultValue1, resultValue2, resultValue3, fun a b c -> a + b - c)
+```
+and highly efficient code can be generated can normally be generated by marking this function `inline`.
 
