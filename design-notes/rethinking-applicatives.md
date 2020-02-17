@@ -72,9 +72,16 @@ let res0 =
 
 ```
 Here, the types are simpler and the code is not too hard to follow for any F# user familiar with `||>` and `|||>`.
-Further there is no need to define the separate `myfunction` to process the results.  There is little wrong with the code
-above and it is often very natural.
+Further there is no need to define the separate `myfunction` to process the results.  The main problems with
+the above code are
 
+1. You need more and more operators `||||||>` etc.
+
+2. The associations `resultValue1` <-> `v1` etc. depending on matching up argument position, and when there are 10 or 20
+   things involved that's going to be a problem and a source of subtle mistakes.
+
+That said in many contexts the above is quite natural.  I've found it natural and useful in dependency graph programming
+with [FSharp.Data.Adaptive](https://github.com/fsprojects/FSharp.Data.Adaptive), for example.
 
 ## Style C: Applicatives With FS-1063
 
