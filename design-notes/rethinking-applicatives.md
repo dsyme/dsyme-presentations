@@ -468,19 +468,31 @@ printfn "res = %A" res
 
 Here is the current behaviour:
 
-* During composition (when `reader1()` is called), the code location for calls to composition functions
-  `LogAtComposition`, `LogAtRuntime`, `BindReturn`, `MergeSources` is
+* During composition (when `reader1()` is called), the code location for de-sugared calls to composition functions such as
+  `reader.LogAtComposition`, `reader.LogAtRuntime`, `reader.BindReturn`, `reader.MergeSources` is
   set at `reader {` in `reader1()`.  You can't, for example,
   place a breakpoint at the line `logAtComposition "building!"`. 
   
 * At runtime, you can set breakpoints in the usual places - e.g. `logAtRuntime` or the `a > b` within `checkAtRuntime`.
 
 In both cases setting a breakpoint at `logAtComposition` won't trigger. You can set a breakpoint in the implementation
-of `logAtComposition` however.
-
-The assumption behind this is that in most CEs (e.g. `async`) the "composition" phase is relatively
+of `logAtComposition` however. The assumption behind this is that in most CEs (e.g. `async`) the "composition" phase is relatively
 bug-free and not of interest in user-code.  However this assumption is by no means always valid, and you should be aware
 of the possible pitfalls here.
+
+To workaround this problem, composition-time functions can take lambdas, for example:
+
+
+```fsharp
+    logAtComposition (fun () -> "building!")
+```
+The de-sugared version is 
+```fsharp
+    reader.LogAtComposition(...,  (fun () -> "building!"))
+```
+and a breakpoint can be placed inside the lambda.    With this in place breakpoints can now be placed in custom operators in the composition logic.
+
+
 
 
 
