@@ -9,10 +9,13 @@ as a practical sample to proof a new technique that will become available in [F#
 to simplify this kind of code even further than before. 
 
 Applicatives can be seen as a way of combining computation elements together "statically" - in the sense that
-all combination can be done as a pre-phase, prior to using the resulting computation. Often many optimization steps can be applied
-during this phase.  For example, in [RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/RFCs/FS-1063-support-letbang-andbang-for-applicative-functors.md)
+all combination can be done as a pre-phase, prior to using the resulting computation. The move from "dynamic composition"
+to "static composition" is crucial in many areas and is not just applicable to functional
+programming - it is also highly relevant to imperative programming that builds graphs.
+For example, in [RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/RFCs/FS-1063-support-letbang-andbang-for-applicative-functors.md)
 there is an example of graph building that shows a 10000x speedup difference (really, `O(N)` to `O(1)`) when using applicatives
-for defining computation graph nodes, rather than using monadic binding.
+for defining computation graph nodes, rather than using monadic binding. Often many optimization steps can be applied
+during of after the composition phase as well.
 
 In this post I will explain why, once [RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/RFCs/FS-1063-support-letbang-andbang-for-applicative-functors.md)
 is available and out of "preview", I would like to see it become a standard way of writing applicatives in F#.
