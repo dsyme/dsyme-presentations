@@ -486,13 +486,14 @@ To workaround this problem, composition-time functions can take lambdas, for exa
 ```fsharp
     logAtComposition (fun () -> "building!")
 ```
-The de-sugared version is 
-```fsharp
-    reader.LogAtComposition(...,  (fun () -> "building!"))
+and a breakpoint can be placed inside the lambda.    With this in place breakpoints can now be placed in custom operators in the composition logic. The library code is:
 ```
-and a breakpoint can be placed inside the lambda.    With this in place breakpoints can now be placed in custom operators in the composition logic.
+    [<CustomOperation("logAtComposition", MaintainsVariableSpaceUsingBind = true) >]
+    member _.LogAtComposition(x: Reader<'T>, msg: unit -> string) =
+        printfn "%s" (msg())
+        r
 
-
+```
 
 
 
