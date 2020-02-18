@@ -432,3 +432,55 @@ As additional examples:
 1. [this gist](https://gist.github.com/dsyme/5dd08c84ad7bdee3ad556af742172eda) shows how to define named node types where the `prefix` custom operator adds a prefix to the name of the node being defined.
 
 2.  There is [another sample for logging in the F# test code](https://github.com/dotnet/fsharp/blob/3f9172ada35b6db08f64ee592785879d60ac6cb9/tests/fsharp/Compiler/Conformance/DataExpressions/ComputationExpressions.fs#L161).  
+
+
+## Appendix: Debugging in applicative builders
+
+The debugging experience inside typical applicative builders is mixed.  Let's use the `Reader<'T>` example above with user code
+```fsharp
+let r1 = Reader.ret 3
+let r2 = Reader.ret 4
+let r3 = Reader.ret 5
+let reader1() =
+    reader { 
+        let! a = r1
+        and! b = r2
+        and! c = r3
+        logAtRuntime (sprintf "a = %d, b = %d, c = %d" a b c)
+        logAtComposition "building!"
+        checkAtRuntime (a > b)
+        logAtComposition "building more!"
+        logAtRuntime "we don't get here"
+        return a + b + c 
+    }
+
+// Composition
+let r= reader1()
+
+// Runtime
+let res = Reader.run r
+
+printfn "res = %A" res
+```
+
+Here is the current behaviour:
+
+* During composition (when `reader1()` is called), the code location for calls to composition functions
+  `LogAtComposition`, `LogAtRuntime`, `BindReturn`, `MergeSources` is
+  set at `reader {` in `reader1()`.  You can't, for example,
+  place a breakpoint at the line `logAtComposition "building!"`. 
+  
+* At runtime, you can set breakpoints in the usual places - e.g. `logAtRuntime` or the `a > b` within `checkAtRuntime`.
+
+In both cases setting a breakpoint at `logAtComposition` won't trigger. You can set a breakpoint in the implementation
+of `logAtComposition` however.
+
+The assumption behind this is that in most CEs (e.g. `async`) the "composition" phase is relatively
+bug-free and not of interest in user-code.  However this assumption is by no means always valid, and you should be aware
+of the possible pitfalls here.
+
+
+
+
+
+
