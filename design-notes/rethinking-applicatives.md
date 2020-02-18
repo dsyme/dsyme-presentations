@@ -256,7 +256,11 @@ let result = ResultBuilder()
 
 One of the hardest decisions in designing an applicative CE (i.e. one that supports `MergeSources`, `BindReturn` and potentially other CE constructs) is whether the CE builder should also define a `Bind` method.
 
-If the builder does define `Bind`, your users can very easily write code that has
+First, some computations simply don't admit a sensible "Bind".  These are often "two phase" computations where there is a strict
+separation between composition and runtime (see also "Custom operators" below).  In this case it's
+simple: no "Bind" is needed.
+
+Further, if the builder does define `Bind`, your users can very easily write code that has
 low performance. RCF FS-1063 contains one example. As another example, if the user defines `Bind`
 the following code will compile:
 
@@ -291,7 +295,7 @@ Alternatively, you can support a `Bind` and leave the user to decide.
 
 Similar care must be taken when adding other semantics such as `TryFinally`, `TryWith`, `While`, `For` and so on.
 
-## Appendix: On performance with FS-1063
+## Appendix: On performance with applicatives
 
 In the above example, the computation
 ```fsharp
