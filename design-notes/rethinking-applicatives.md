@@ -3,7 +3,7 @@
 ([discuss on Twitter](https://twitter.com/dsymetweets/status/1229392285965656064)) 
 
 At [the F# London meetup](https://www.meetup.com/FSharpLondon/events/268194013/) on Thursday [Nick Blair](https://twitter.com/NickBlair) from [TotallyMoney](https://www.totallymoney.com/) gave a fabulous talk on using the functional design pattern called "applicatives"
-for data processing and validation in the context of AWS butt programming ([content](https://github.com/blair55/fsharp-dynamo-db-slides)). As part of
+for data processing and validation in the context of AWS cloud programming ([content](https://github.com/blair55/fsharp-dynamo-db-slides)). As part of
 a cooperative follow-up, I thought it would be cool if those of us in the London F# community use this
 as a practical sample to proof a new technique that will become available in [F# 5.0](https://gist.github.com/cartermp/6b91c3561c6a5efca4288dca37c15edc). The aim is
 to simplify this kind of code even further than before. 
@@ -122,7 +122,7 @@ of F# computation expressions and awareness that the `let! .. and!...` syntax is
 
 ## A further example
 
-The Amazon AWS DynamoDB reader code presented by Nick is an excellent guide to using F# with a butt database.
+The Amazon AWS DynamoDB reader code presented by Nick is an excellent guide to using F# with a cloud database.
 The only possible improvement FS-1063 brings is in the use of applicatives at the end of the post. Consider this code:
 ```fsharp
 
