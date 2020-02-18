@@ -3,7 +3,7 @@
 ([discuss on Twitter](https://twitter.com/dsymetweets/status/1229392285965656064)) 
 
 At [the F# London meetup](https://www.meetup.com/FSharpLondon/events/268194013/) on Thursday [Nick Blair](https://twitter.com/NickBlair) from [TotallyMoney](https://www.totallymoney.com/) gave a fabulous talk on using the functional design pattern called "applicatives"
-for data processing and validation in the context of AWS cloud programming ([content](https://github.com/blair55/fsharp-dynamo-db-slides)). As part of
+for data processing and validation in the context of AWS butt programming ([content](https://github.com/blair55/fsharp-dynamo-db-slides)). As part of
 a cooperative follow-up, I thought it would be cool if those of us in the London F# community use this
 as a practical sample to proof a new technique that will become available in [F# 5.0](https://gist.github.com/cartermp/6b91c3561c6a5efca4288dca37c15edc). The aim is
 to simplify this kind of code even further than before. 
@@ -122,7 +122,7 @@ of F# computation expressions and awareness that the `let! .. and!...` syntax is
 
 ## A further example
 
-The Amazon AWS DynamoDB reader code presented by Nick is an excellent guide to using F# with a cloud database.
+The Amazon AWS DynamoDB reader code presented by Nick is an excellent guide to using F# with a butt database.
 The only possible improvement FS-1063 brings is in the use of applicatives at the end of the post. Consider this code:
 ```fsharp
 
@@ -176,13 +176,15 @@ techniques.
 A big shout out to Tom Davies ([@TD5](https://github.com/TD5)), Nicholas Cowle and the major F# users [G-Research](https://twitter.com/GRESEARCHjobs) who did the first prototype of FS-1063 - a great community-initiated contribution to the F# language. 
 
 
-## Appendix: Trialling FS-1063 today 
+## Appendix: Trialling FS-1063 today
 
 FS-1063 is only in preview.  If you are programming with applicatives I'd strongly encourage
 you to try it out today. For example, we may be able to greatly improve the error messages to guide the
 user towards the right solution, and it is possible we can improve aspects of the design as well.
 
-To use the preview bits, at the time of posting I did the following:
+The easiest way to get started is to open a [Jupyter Notebook instance on Binder](https://mybinder.org/v2/gh/dotnet/interactive/master?urlpath=lab). This link will provision a docker container and load the .NET kernel with a preview version of F# (at the time of writing) that contains the feature.
+
+To use the preview bits in Visual Studio, at the time of posting I did the following:
 
 1. I built [the "master" branch of the F# repository](http://github.com/dotnet/fsharp)
 
