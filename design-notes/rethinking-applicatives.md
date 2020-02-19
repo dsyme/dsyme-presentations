@@ -179,13 +179,15 @@ techniques.
 A big shout out to Tom Davies ([@TD5](https://github.com/TD5)), Nicholas Cowle and the major F# users [G-Research](https://twitter.com/GRESEARCHjobs) who did the first prototype of FS-1063 - a great community-initiated contribution to the F# language. 
 
 
-## Appendix: Trialling FS-1063 today 
+## Appendix: Trialling FS-1063 today
 
 FS-1063 is only in preview.  If you are programming with applicatives I'd strongly encourage
 you to try it out today. For example, we may be able to greatly improve the error messages to guide the
 user towards the right solution, and it is possible we can improve aspects of the design as well.
 
-To use the preview bits, at the time of posting I did the following:
+The easiest way to get started is to open a [Jupyter Notebook instance on Binder](https://mybinder.org/v2/gh/dotnet/interactive/master?urlpath=lab). This link will provision a docker container and load the .NET kernel with a preview version of F# (at the time of writing) that contains the feature.
+
+To use the preview bits in Visual Studio, at the time of posting I did the following:
 
 1. I built [the "master" branch of the F# repository](http://github.com/dotnet/fsharp)
 
