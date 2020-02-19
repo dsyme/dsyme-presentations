@@ -113,7 +113,7 @@ let res1 =
 Here `let! ... and! ...` is understood as "merge the sources on the right and bind them simultaneously". The code
 the library defines is shown at the end of this post.
 
-The deugared code effectively uses `Result.zip` and `Result.map`.
+The desugared code effectively uses `Result.zip` and `Result.map`.
 An optimized version can just use `Result.map3`. See the note at the end for the de-sugaring and computation expression
 builder definition.
 
