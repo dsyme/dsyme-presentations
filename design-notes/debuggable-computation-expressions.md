@@ -8,7 +8,7 @@ let asyncResult = AsyncResultBuilder()
 type AsyncResult<'a> = Async<Result<'a, exn>>
 ```
 
-### Technique 1 - Inline your Delay, Bind, BindReturn, For, While, Combine methods and their implementations, down to a set of primitives.
+#### Technique 1 - Inline your Delay, Bind, BindReturn, For, While, Combine methods and their implementations, down to a set of primitives.
 
 This has the effect of associating the source range of the inlined closures with the ultimate point where those closures are used.
 
@@ -36,7 +36,7 @@ type AsyncResultBuilder () =
 ```
 
   
-2. Technique 2 - Disable tailcalling in ReturnFrom in DEBUG mode by using a formulation like this:
+#### Technique 2 - Disable tailcalling in ReturnFrom in DEBUG mode by using a formulation like this:
 
 ```fsharp
     member inline __.ReturnFrom (asyncResult : Async<Result<'T, 'Error>>) =
