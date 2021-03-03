@@ -38,12 +38,14 @@ type AsyncResultBuilder () =
   
 2. Technique 2 - Disable tailcalling in ReturnFrom in DEBUG mode by using a formulation like this:
 
+```fsharp
     member inline __.ReturnFrom (asyncResult : Async<Result<'T, 'Error>>) =
 #if DEBUG
         async { let! res = asyncResult in return res }
 #else
         asyncResult
 #endif
+```
 
 Note this only applies to CEs defined in your own code - if shipping across asembly boundaries there is no way to tell if client code is also being compiled as debug.
 
