@@ -52,7 +52,11 @@ type AsyncResultBuilder () =
 Note this only applies to CEs defined in your own code - if shipping across asembly boundaries there is no way to tell if client code is also being compiled as debug.
 
 
-#### Future Technique 3 - `FSharp.Debug.InlineDebuggerEnvironment();`
+#### Technique 3 - Manually drop async tailcalls 
+
+See example above
+
+#### Future Technique 4 - `FSharp.Debug.InlineDebuggerEnvironment();`
 
 
 
