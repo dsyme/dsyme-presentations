@@ -66,7 +66,7 @@ let f () =
 It's off by default because it's harmless, and we're already doing an allocation for the closure, however some people writing high-performance
 code may want this on.
 
-### Warning 1178 - inference of NoEquality
+#### Warning 1178 - inference of NoEquality
 
 When you define a union, record or struct type in F#, the compiler infers whether the type supports structural equality and ordering (called structural comparison).
 For example, this type supports both equality and ordered comparison:
@@ -104,7 +104,7 @@ gives:
 stdin(1,6): warning FS1178: The struct, record or union type 'D2' is not structurally comparable because the type 'System.Type' does not satisfy the 'comparison' constraint. Consider adding the 'NoComparison' attribute to the type 'D2' to clarify that the type is not comparable
 ```
 
-### Warning 3517 - `InlineIfLambda` didn't get inlined
+#### Warning 3517 - `InlineIfLambda` didn't get inlined
 
 This relates to a feature in [RFC FS-1098](https://github.com/fsharp/fslang-design/blob/main/preview/FS-1098-inline-if-lambda.md), in preview.
 
