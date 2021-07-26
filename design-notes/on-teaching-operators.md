@@ -20,11 +20,6 @@ These operators are known from primary school math, no need to teach them explic
     =  <>                Comparison (needs teaching because different to other languages) 
     && ||                Boolean (needs teaching because not all students know programming)
  
-    (e1, .. e2)          Tuples
-    [ … ]                Lists
-    [| … |]              Arrays
-    { A=1; B=2 }         Records
-
     3 :: xs              Cons onto a list (note, you can use List.Cons(3, xs) instead. However :: is necessary when pattern matching on lists)
  
     | … ->               Rule in pattern matching
@@ -59,13 +54,9 @@ Below are some other operators you might need to know in specialized contexts
 These operators will occur along the way in teach specific sections, e.g. on
 programming with functions, or using F# quotations.
 
-    [< … >]                          Attributes
-
     f1 >> f2                         Function composition
     (expr1, expr2) ||> f             Two-argument pipelining 
     (expr1, expr2, expr3) |||> f     Three-argument pipelining 
-
-    {| A=1; B=2 |}                   Anonymous records
 
     n..step..m                       Range with step (within a list or sequence or loop)
 
@@ -94,7 +85,7 @@ better alternatives when teaching.
  
     !cell                            Dereference a mutable reference cell.  Use cell.Value instead
     :=                               Assign a mutable reference cell.  Use "cell.Value <- expr" instead
-    list1 @ list2                    Append one list to another.  Can normally use a computed list expression or List.append instead
+    @                                Append one list to another.  Can normally use a computed list expression or List.append instead
     
     <<                               Backward function composition, discouraged in favour of forward composition
     
