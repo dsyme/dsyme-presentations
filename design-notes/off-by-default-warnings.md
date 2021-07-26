@@ -2,6 +2,9 @@
 
 The F# compiler implements some "off-by-default" warnings.  Here they are (at the time of writing, 26 July 2021):
 
+#### Warning 52 - defensive copy
+
+See https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/compiler-messages/fs0052 for information on this one.
 
 #### Warning 1182 - unused value
 
