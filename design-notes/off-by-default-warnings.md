@@ -2,6 +2,40 @@
 
 The F# compiler implements some "off-by-default" warnings.  Here they are (at the time of writing, 26 July 2021):
 
+#### Warning 21 - recursive use checked at runtime 
+
+This relates to `let rec` on values.  For example
+
+```fsharp
+type D = { Invoke: unit -> D }
+
+let mutable count = 0
+let makeD f = 
+    let n = count
+    count <- count + 1
+    { Invoke = (fun () -> f n) }
+
+let rec v = makeD (fun n -> printfn $"n = {n}"; v)
+
+// same value gets printed each time, proving only one object is created, and
+// it refers back to itself.
+v.Invoke() 
+v.Invoke().Invoke()
+
+```
+
+This ordinarily produces warning 40:
+```
+stdin(12,49): warning FS0040: This and other recursive references to the object(s) being defined will be checked for initialization-soundness at runtime through the use of a delayed reference. This is because you are defining one or more recursive objects, rather than recursive functions. This warning may be suppressed by using '#nowarn "40"' or '--nowarn:40'.
+```
+However enabling warning level 5 also produces an additional warning on every individual point where a recursive soundness check may be performed:
+
+```
+stdin(12,49): warning FS0021: This recursive use will be checked for initialization-soundness at runtime. This warning is usually harmless, and may be suppressed by using '#nowarn "21"' or '--nowarn:21'.
+```
+
+This is off by default as it's not that useful.
+
 #### Warning 52 - defensive copy
 
 See https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/compiler-messages/fs0052 for information on this one.
