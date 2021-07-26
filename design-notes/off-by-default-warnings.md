@@ -63,6 +63,8 @@ let f () =
 
 ![image](https://user-images.githubusercontent.com/7204669/127040286-0b35d800-a4cc-4110-832b-df65603217b2.png)
 
+It's off by default because it's harmless, and we're already doing an allocation for the closure, however some people writing high-performance
+code may want this on.
 
 ### Warning 1178 - inference of NoEquality
 
