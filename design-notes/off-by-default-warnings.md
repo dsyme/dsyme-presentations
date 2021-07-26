@@ -1,6 +1,6 @@
 # Off-by-default Warnings in F#
 
-The F# compiler implements some "off-by-default" warnings.  Here they are (at the time of writing):
+The F# compiler implements some "off-by-default" warnings.  Here they are (at the time of writing, 26 July 2021):
 
 
 #### Warning 1182 - unused value
