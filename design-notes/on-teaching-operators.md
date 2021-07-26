@@ -43,7 +43,7 @@ These operators are known from primary school math, no need to teach them explic
 
     thing <- expr        Mutation of local, field etc.
 
-    ``abc def``          Long identifier
+    ``abc def``          Identifier with whacky characters
 
 
 **And that's all**.  
