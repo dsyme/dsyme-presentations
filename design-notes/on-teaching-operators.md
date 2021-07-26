@@ -22,6 +22,8 @@ These operators are known from primary school math, no need to teach them explic
     [ … ]                Lists
     [| … |]              Arrays
     { A=1; B=2 }         Records
+
+    3 :: xs              Cons onto a list (note, you can use List.Cons(3, xs) instead. However :: is necessary when pattern matching on lists)
  
     | … ->               Rule in pattern matching
     _                    Wildcard in pattern matching
@@ -76,10 +78,9 @@ with a simple google search:
 The following are all either never really used, or discouraged in beginner code, or things where there are generally
 better alternatives when teaching.
  
-    3 :: xs                          Cons onto a list.  Use Cons(3, xs). However necessary in pattern matching on lists
     !cell                            Dereference a mutable reference cell.  Use cell.Value instead
     :=                               Assign a mutable reference cell.  Use "cell.Value <- expr" instead
-    list1 @ list2                    Append one list to another.  Use List.append instead
+    list1 @ list2                    Append one list to another.  Can normally use a computed list expression or List.append instead
     
     <<                               Backward function composition, discouraged in favour of forward composition
     
