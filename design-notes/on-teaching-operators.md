@@ -5,7 +5,9 @@ In this article I will takes a brief look at what operators and symbols an F# pr
 It’s a really good topic for simplification of docs and teaching in F#.  In practice you need to know very, very few of them.
 Below I've categorised the various operators of F# into groups - for example, the ones I believe all F# programmers need to know.
 
- #### Assumed obvious
+## Operators You Need to Know
+
+#### Assumed obvious
  
 These operators are known from primary school math, no need to teach them explicitly:
 
@@ -46,10 +48,11 @@ These operators are known from primary school math, no need to teach them explic
 
 **And that's all**.  
 
-------------------------------------------------
+------
+
+## Operators You Might Need to Know
 
 Below are some other operators you might need to know in specialized contexts
-
 
 #### Teach in specialized sections:
  
@@ -81,8 +84,10 @@ with a simple google search:
     &&& ||| ^^^                      Bitwise (&& in C#)
     <<< >>>                          Bitwise shift (<< in C#)
     ~~~                              Bitwise negation (~ in C#)
- 
-### Ones to largely ignore
+
+------
+
+## Operators You Don't Need to Know
 
 The following are all either never really used, or discouraged in beginner code, or things where there are generally
 better alternatives when teaching.
