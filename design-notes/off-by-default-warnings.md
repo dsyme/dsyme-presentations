@@ -84,7 +84,7 @@ type D3 = { A: string; B: (int -> int) }
 These logical properties of types come into play when using `=`, `compare` and so on.
 
 F# normally does this inference silently, however warning 1178 can be enabled to show more details of what's going on.
-Unusually this gets enabled by turning the warning level to 5.  This is the only extra thing at this warning level.
+This gets enabled by turning the warning level to 5.
 
 ```
 dotnet fsi --warn:5
