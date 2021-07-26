@@ -39,7 +39,11 @@ These operators are known from primary school math, no need to teach them explic
     ``abc def``          Long identifier
 
 
-**And that's all**.  Below are some other operators you might need to know in specialized contexts:
+**And that's all**.  
+
+------------------------------------------------
+
+Below are some other operators you might need to know in specialized contexts
 
 
 #### Teach in specialized sections:
