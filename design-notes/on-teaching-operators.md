@@ -1,8 +1,8 @@
-# What F# operators does an F# programmer need to know?
+# What F# operators and symbols does an F# programmer need to know?
 
 In this article I will takes a brief look at what operators and symbols an F# programmer actually needs to know.
 
-It’s a really good topic for simplification of docs and teaching in F#.  In practice you need to know very few of them.
+It’s a really good topic for simplification of docs and teaching in F#.  In practice you need to know very, very few of them.
 Below I've categorised the various operators of F# into groups - for example, the ones I believe all F# programmers need to know.
 
  #### Assumed obvious
@@ -32,6 +32,11 @@ These operators are known from primary school math, no need to teach them explic
  
     n..m                 Ranges (within a list or sequence or loop)
 
+    expr : type          Type constraint (also for patterns)
+    expr :? type         Type test (also in patterns) 
+    expr :> type         Cast up
+    expr :?> type        Cast down
+
     expr |> f            Pipelining 
 
     thing <- expr        Mutation of local, field etc.
@@ -56,10 +61,6 @@ programming with functions, or using F# quotations.
     f1 >> f2                         Function composition
     (expr1, expr2) ||> f             Two-argument pipelining 
     (expr1, expr2, expr3) |||> f     Three-argument pipelining 
-
-    expr :? type                     Type test (the ? indicates possible test/failure) 
-    expr :> type                     Cast up
-    expr :?> type                    Cast down (may fail, the ? indicates possible test/failure)
 
     {| A=1; B=2 |}                   Anonymous records
 
