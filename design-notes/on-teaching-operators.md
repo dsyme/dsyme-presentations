@@ -1,4 +1,4 @@
-# What F# operators and symbols does an F# programmer need to know?
+# What operators and symbols does an F# programmer need to know?
 
 In this article I will takes a brief look at what operators and symbols an F# programmer actually needs to know.
 
