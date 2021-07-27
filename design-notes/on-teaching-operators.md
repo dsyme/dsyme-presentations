@@ -22,7 +22,6 @@ These operators are known from primary school math, no need to teach them explic
  
     3 :: xs              Cons onto a list (note, you can use List.Cons(3, xs) instead. However :: is necessary when pattern matching on lists)
  
-    | … ->               Rule in pattern matching
     _                    Wildcard in pattern matching
  
     'T                   Generic type parameter
