@@ -27,6 +27,8 @@ These operators are known from primary school math, no need to teach them explic
     'T                   Generic type parameter
  
     n..m                 Ranges (within a list or sequence or loop)
+    a.[0]                Indexers
+    a.[1..5]             Slices
 
     expr : type          Type constraint (also for patterns)
     expr :? type         Type test (also in patterns) 
