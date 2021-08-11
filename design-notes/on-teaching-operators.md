@@ -96,3 +96,10 @@ better alternatives when teaching.
     
     *?, +? …                         Nullable operators (these are used exceptionally rarely in LINQ queries, ignore these)
  
+------
+
+## Should I Define My Own Oeprators?
+
+Almost certainly not.
+
+
