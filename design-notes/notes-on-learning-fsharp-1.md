@@ -11,11 +11,14 @@ There is a difference between "teaching programming with F#" and "teaching funct
 
 In the learning sequence for "teaching programming" F# we should likely put mutation earlier, e.g.
 
-1. let, conditionals, mutation, for loops, printing
+1. let, conditionals, mutation, for loops, printing, interpolated strings
 2. data - lists, tuples, records, mutable records
 3. More lists!  List.map, List.filter, list expressions
 4. options, unions, pattern matching, active patterns
 5. arrays, while
+6. objects etc.
+
+That is, the emphasis is first on highly familiar constructs, followed by a more usual sequence for the other topics.
 
 ## Drop "computed list expressions" in favour of just "list expressions" 
 
