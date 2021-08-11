@@ -1,4 +1,4 @@
-# Notes from Chatting About F#
+# Notes from Chatting About Learning F#
 
 These are notes from a conversation I had today.
 
