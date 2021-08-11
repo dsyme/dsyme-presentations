@@ -172,7 +172,7 @@ let f r =
     | { XS = [x]; Y = y} -> x + y
     | _ -> 1
 ```
-Whenever you do record pattern matching it's normally better to abstract out with active patterns and give it a name
+Whenever you do record pattern matching it's normally better to abstract out with active patterns and give it a good name that indicates the subset being carved out:
 ```fsharp
 // adhoc active pattern
 let (|RWithOneX|_|) (r: R) =
