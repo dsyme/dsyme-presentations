@@ -68,7 +68,7 @@ Now consider the reverse:
 ```
 peak-peak --> peakPeak
 ```
-Might use a mutable:
+For this a simple solution is to use a mutable:
 ```fsharp
 open System
 
@@ -84,7 +84,8 @@ let toCamel (inp: string) =
              yield c |]
     |> String
 ```
-This is **totally acceptable**.  There are more functional approaches but the above is fine. If you find yourself repeating
+This is **totally acceptable**.  There are more functional approaches but the above is fine as the mutation is highly localised and non-escaping. In many
+ways it is clearer and just as declarative as a fold.  Also, if you find yourself repeating
 common patterns abstract things out into extra `List` functions, see below.
 
 Aside: you can also omit the `yield` keywords in the above, because of [implicit yields](https://github.com/fsharp/fslang-design/blob/main/FSharp-4.7/FS-1069-implicit-yields.md).
