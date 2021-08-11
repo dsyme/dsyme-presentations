@@ -4,7 +4,7 @@ These are notes from a conversation I had today about learning F#.
 
 ## "Teaching Programming with F#"
 
-There is a difference between "teaching programming with F#" and "teaching *functional* programming with F#".
+There is a difference between "teaching *programming* with F#" and "teaching *functional* programming with F#".
 
 - The first is likely more suitable for Python programmers
 - The second is likely more suitable for existing Haskell, Scala programmers, some C#/Python programmers too
