@@ -42,6 +42,8 @@ xs |> List.filter  f                 <--> [ for x in xs do if f x then yield x ]
 xs |> List.filter  f1 |> List.map f2 <--> [ for x in xs do if f1 x then yield f2 x ]
 ```
 
+The `yield` can be dropped in the above.
+
 ## Why we use fold a lot less than you might think
 
 Fold is used a lot less than in other functional languages.  There are two reasons
