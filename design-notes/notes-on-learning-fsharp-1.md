@@ -46,7 +46,7 @@ xs |> List.filter  f1 |> List.map f2 <--> [ for x in xs do if f1 x then yield f2
 
 Fold is used a lot less than in other functional languages.  There are two reasons
 1. List/array/seq expressions are very powerful in F# 
-2. The functions `List.sum`, `List.max` etc. tend to replace nearly all uses of fold
+2. The functions `List.sum`, `List.max` etc. tend to replace many common uses of fold
 
 Consider implementing this transformation:
 ```
