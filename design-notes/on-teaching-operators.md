@@ -73,7 +73,7 @@ These operators are found in F# code but can normally be left off a teaching pat
 with a simple google search:
 
     %                                Modulus
-    &&& ||| ^^^                      Bitwise (&& in C#)
+    &&& ||| ^^^                      Bitwise (&, |, ^ in C#)
     <<< >>>                          Bitwise shift (<< in C#)
     ~~~                              Bitwise negation (~ in C#)
 
