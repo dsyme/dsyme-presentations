@@ -1,12 +1,12 @@
 # Notes from Chatting About Learning F#
 
-These are notes from a conversation I had today.
+These are notes from a conversation I had today about learning F#.
 
 ## "Teaching Programming with F#"
 
-There is a difference between "teaching programming with F#" and "teaching functional programming with F#".
+There is a difference between "teaching programming with F#" and "teaching *functional* programming with F#".
 
-- The first is more suitable for Python programmers
+- The first is likely more suitable for Python programmers
 - The second is likely more suitable for existing Haskell, Scala programmers, some C#/Python programmers too
 
 In the learning sequence for "teaching programming" F# we should likely put mutation earlier, e.g.
@@ -22,8 +22,8 @@ That is, the emphasis is first on highly familiar constructs, followed by a more
 
 ## Drop "computed list expressions" in favour of just "list expressions" 
 
-Instead of saying "list expressions" and "computed list expressions" we should just say "list expressions" for all of these.
-We don't need complicated terminology.
+Instead of saying "list expressions" (e.g. `[1;2]`) and "computed list expressions" (e.g. `[for x in xs -> x, x*x]`) 
+we should just say "list expressions" for all of these. We don't need the complicated terminology.
 
 Likewise array/seq.
 
