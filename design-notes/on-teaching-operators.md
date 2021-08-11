@@ -98,8 +98,9 @@ better alternatives when teaching.
  
 ------
 
-## Should I Define My Own Oeprators?
+## Should I Define My Own Operators?
 
-Almost certainly not.
+Almost certainly not. See https://docs.microsoft.com/en-us/dotnet/fsharp/style-guide/component-design-guidelines#avoid-defining-custom-symbolic-operators
+
 
 
