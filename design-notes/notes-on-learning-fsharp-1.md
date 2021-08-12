@@ -163,7 +163,7 @@ module Array =
             yield x |]
 ```
 
-## What to fo when patterns get big and complex?
+## What to do when patterns get big and complex?
 
 Pattern matching can get big and gnarly, and in particular record pattern matching, for example:
 
