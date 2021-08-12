@@ -22,7 +22,7 @@ That is, the emphasis is first on highly familiar constructs, followed by a more
 
 ## Drop "computed list expressions" in favour of just "list expressions" 
 
-Instead of saying "list expressions" (e.g. `[1;2]`) and "computed list expressions" (e.g. `[for x in xs -> x, x*x]`) 
+Instead of saying "list expressions" (e.g. `[1;2]`) and "computed list expressions"  
 we should just say "list expressions" for all of these. We don't need the complicated terminology.
 
 Likewise array/seq.
@@ -41,6 +41,7 @@ xs |> List.map  f                    <--> [ for x in xs -> f x ]
 xs |> List.filter  f                 <--> [ for x in xs do if f x then yield x ]
 xs |> List.filter  f1 |> List.map f2 <--> [ for x in xs do if f1 x then yield f2 x ]
 ```
+Examples with "append" tend to be messy on the left 
 
 The `yield` can be dropped in the above.
 
