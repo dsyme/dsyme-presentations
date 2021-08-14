@@ -51,7 +51,7 @@ match datas with
 ```
 
 However this is rare - again, most pattern matching in F# is not against such objects. Further, if you're doing this
-**you're patterns are probably getting too complex** and you should almost certainly extract your pattern
+**your patterns are probably getting too complex** and you should almost certainly extract your pattern
 logic to more semantically meaningful active patterns.
 
 As a contrived example, here's a "more meaningful" (that is logically richer) active pattern that checks
