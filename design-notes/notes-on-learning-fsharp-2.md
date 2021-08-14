@@ -1,4 +1,7 @@
-### Notes in F# and pattern matching
+## Notes in F# and pattern matching
+
+[Twitter thread, please comment here](https://mobile.twitter.com/dsymetweets/status/1426674745517518848) 
+
 
 ### How to pattern match on properties and arbitrary objects
 
