@@ -33,8 +33,11 @@ match datas with
 | _ -> printfn $"unknown"
 ```
 
-That is, in F# we don't really extract properties in **patterns** - we extract properties in **expressions**. We believe this is
-much, much more readable.
+That is, in F# we don't really extract properties in **patterns** - we extract properties in **expressions**. This is
+much more readable. Everyone understand a property expression.
+Few people understand property patterns, especially nested ones. 
+Even fewer can accurately tell you how many times the property
+will be invoked during pattern matching. 
 
 There is in fact [a proposal to add property patterns](https://github.com/fsharp/fslang-suggestions/issues/968) and we might eventually do
 it, but on the whole we will always much prefer to put the property access in an expression not a pattern.  This is because
