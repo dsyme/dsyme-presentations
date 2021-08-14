@@ -1,4 +1,4 @@
-## Notes in F# and pattern matching
+## Notes on F# and pattern matching on arbitrary objects
 
 [Twitter thread, please comment here](https://mobile.twitter.com/dsymetweets/status/1426674745517518848) 
 
