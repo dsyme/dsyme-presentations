@@ -108,3 +108,19 @@ take up most of the slack where information is not fully known statically but st
 Because of this, F# doesn't mind making you pay a little tax to do a type test. Because you probably want to be explicit about it.
 In that sense it's like `let mutable`.
 
+### Biasing against type test --> Biasing against type hierarchies
+
+Looking beyond type tests, F# kind of biases against type hierarchies all the time. 
+See my talk [F# Code I Love](https://www.youtube.com/watch?v=1AZA1zoP-II).
+F# is cool with non-hierarchical class types and classes implementing common interfaces (IEnumerable etc.). But it de-emphasises inheritance as a technique. 
+
+For example, in the whole compiler there are about 50 inherit, in just two particular places, and almost no implementation inheritance. The same will be true in methodology books.
+
+Is this intrinsic to F# programming (functional or otherwise), or is it part of F# "functional" programming?  I think it is intrinsic to F# programming.
+This means inheritance will come late in a learning sequence and be generally de-emphasised, as will type tests.
+
+However this leads to a problem where are teaching people who are "expecting" inheritance, that is, who have been trained to think and model in terms of inheritance -
+that's about 99% of the computing universe.  Historically some of these people have had a hard time getting in to F# (while people coming "fresh"
+without any idea of inheritance - or sick of it's failings -  find it easier). It's one of the things F# currently asks people to "unlearn".
+
+
