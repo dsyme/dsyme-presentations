@@ -1,9 +1,9 @@
-## Notes on F# and pattern matching on arbitrary objects
+# On Pattern Matching 
 
 [Twitter thread, please comment here](https://mobile.twitter.com/dsymetweets/status/1426674745517518848) 
 
 
-### How to pattern match on properties and arbitrary objects
+### How to pattern match on properties
 
 Many C# pattern matching examples focus on how to pattern match on classes (that is, objects). 
 
