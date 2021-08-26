@@ -73,7 +73,7 @@ These operators are found in F# code but can normally be left off a teaching pat
 with a simple google search:
 
     %                                Modulus
-    &&& ||| ^^^                      Bitwise (&& in C#)
+    &&& ||| ^^^                      Bitwise (&, |, ^ in C#)
     <<< >>>                          Bitwise shift (<< in C#)
     ~~~                              Bitwise negation (~ in C#)
 
@@ -96,3 +96,11 @@ better alternatives when teaching.
     
     *?, +? …                         Nullable operators (these are used exceptionally rarely in LINQ queries, ignore these)
  
+------
+
+## Should I Define My Own Operators?
+
+Almost certainly not. See https://docs.microsoft.com/en-us/dotnet/fsharp/style-guide/component-design-guidelines#avoid-defining-custom-symbolic-operators
+
+
+
