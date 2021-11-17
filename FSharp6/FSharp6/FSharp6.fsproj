@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Tasks.fs" />
+    <Compile Include="Debugging.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FSharp.Core.Fluent" Version="3.0.1" />
+    <PackageReference Include="FSharp.Data" Version="4.2.4" />
+    <PackageReference Include="Giraffe" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
