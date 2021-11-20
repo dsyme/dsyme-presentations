@@ -4,6 +4,7 @@
 #r "nuget: FSharp.Core.Fluent, 3.0.1"
 *)
 
+
 module StringInterpolation =
 
     let x = 1
@@ -41,13 +42,6 @@ module OpenType =
     let two = Max(1.0, 2.0)
 
 module Applicatives1 =
-    let res1 =
-        result { 
-            let! a = resultValue1 
-            and! b = resultValue2
-            and! c = resultValue3
-            return a + b - c 
-        }
 
     module Result = 
         let zip x1 x2 = 
@@ -62,8 +56,20 @@ module Applicatives1 =
 
     let result = ResultBuilder()
 
+    let resultValue1 = Ok 1 
+    let resultValue2 = Ok 1 
+    let resultValue3 = Ok 1 
+
+    let compute1() =
+        result { 
+            let! a = resultValue1 
+            and! b = resultValue2
+            and! c = resultValue3
+            return a + b - c 
+        }
 
 
+#nowarn "40"
 module Applicatives2 =
 
     let mutable nodes = 0

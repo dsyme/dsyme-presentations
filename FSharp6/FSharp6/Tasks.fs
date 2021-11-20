@@ -17,7 +17,7 @@ module Demo =
 
     let someFunction2 (x: int) =
         async {
-           let! result1 = someFunction (x+x) |> Async.Awai
+           let! result1 = someFunction (x+x) |> Async.AwaitTask
            return (result1+result1)
         }
         |> Async.StartAsTask
