@@ -4,22 +4,22 @@
 #r "nuget: FSharp.Core.Fluent, 3.0.1"
 *)
 
-
 module StringInterpolation =
 
     let x = 1
     let pi = 3.1414
+    let now = System.DateTime.Now
     let text = "cats"
 
     let string = $"I say {x} is one and {pi} is pi"
     
-    printfn $"I say again {x} is one and {pi} is pi"
+    let text = now.ToString("G")
+    printfn $"""I say again %d{x} is one and {text} is pi"""
     // output: I say again 1 is one and 3.14 is pi
 
     let s = $"I say {x} is one and %0.2f{pi} is pi and %10s{text} are dogs"
     //val s : string =  "I say 1 is one and 3.14 is pi and       cats are dogs"
 
-    
     let log fmt = Printf.kprintf (fun s -> System.Console.Error.WriteLine("LOG: " + s)) fmt
 
     let result = 6 + 5
@@ -35,7 +35,15 @@ module StringInterpolation =
 
 module OpenType =
 
+    type C() =
+        static member Something(x: int) = x + x
+        static member P = 1 + 1
+        
     open type System.Math
+    open type C
+
+    let v2 = P + P
+    let vv = Something(3)
 
     let one = Min(1.0, 2.0)
     let onef = Min(1.0f, 2.0f)
@@ -68,8 +76,6 @@ module Applicatives1 =
             return a + b - c 
         }
 
-
-#nowarn "40"
 module Applicatives2 =
 
     let mutable nodes = 0
@@ -203,7 +209,8 @@ module Applicatives2 =
         member _.Return(x: 'T) : Node<'T> =
             ConstantNode<'T>(x) :> Node<_>
 
-    let node = NodeBuilder()
+    let nodeStatic = NodeBuilder()
+    let nodeDynamic = NodeBuilder()
     let input v = InputNode(v)
 
     let inp1 = input 3
@@ -211,16 +218,15 @@ module Applicatives2 =
     let inp3 = input 0
 
     let test1() = 
-        node { 
+        nodeStatic { 
             let! v1 = inp1
             and! v2 = inp2
             and! v3 = inp3
             return v1 + v2 + v3
         }
-       //let n1 = node.Bind3Return(inp1.Node, inp2.Node, inp3.Node, (fun (v1, v2, v3) -> v1 + v2 + v3))
 
     let test2() = 
-        node { 
+        nodeDynamic { 
             let! v1 = inp1
             let! v2 = inp2
             let! v3 = inp3
@@ -254,6 +260,16 @@ module Applicatives2 =
     test "using and!" test1
     test "using let!" test2
 
+
+module Sample =
+    let f() =
+        let mutable finished = false
+        while finished do 
+           printfn "hello"
+           if System.DateTime.Now.DayOfWeek = System.DayOfWeek.Monday then
+              finished <- true
+
+
 module Tasks =
     let someFunction (x: int) =
         task {
@@ -261,15 +277,33 @@ module Tasks =
         }
 
 
-    let someFunction2 (x: int) =
-        async {
-           let! result1 = someFunction (x+x) |> Async.AwaitTask
-           return (result1+result1)
+    let rec someFunction2 (x: int) =
+        task {
+           let! result1 = someFunction (x+x)
+           let! result2 = someFunction (x+x)
+           let! result3 = someFunction (x+x)
+           let! result4 = someFunction (x+x)
+           if today then 
+              return! someFunction (x+1)
+           else
+              return 3
         }
-        |> Async.StartAsTask
+
+    let someFunction3 (x: int) =
+        async {
+           let! result1 = someFunction (x+x)
+           let! result2 = someFunction (x+x)
+           let! result3 = someFunction (x+x)
+           let! result4 = someFunction (x+x)
+           return (result1+result2+result3+result4)
+        }
 
 
+*)
 
+/// <summary>
+/// Get the average number of viewers for each doctor's series run
+/// </sumary>
 module PipelineDebugging =
 
 
@@ -314,13 +348,15 @@ module PipelineDebugging =
 
     let episodes =
        extractEpisodes()
-       |> List.filter (fun ep -> ep.Director <> "")
 
 
-
-
-    // Get the average number of viewers for each doctor's series run
-    let getAverageByDirector(episodes: Episode list) =
+    let getAverageByDirector(episodes0: Episode list) =
+        let episodes = 
+           episodes0
+            |> List.filter (fun ep -> ep.Director <> "")
+        let episodes = 
+           episodes
+            |> List.filter (fun ep -> ep.Director <> "")
         episodes
         |> List.groupBy (fun ep -> ep.Director)
         |> List.map (fun (director, episodes) -> director, episodes.averageBy (fun ep -> ep.Views))
@@ -328,6 +364,7 @@ module PipelineDebugging =
 
     let getAverageByDalekness(episodes: Episode list) =
         episodes
+        |> List.filter (fun ep -> ep.Director <> "")
         |> List.groupBy (fun ep -> ep.Title.Contains("Dalek"))
         |> List.map (fun (daleks, episodes) -> daleks, episodes.averageBy (fun ep -> ep.Views))
         |> List.sortBy (fun (_director, views) -> views)

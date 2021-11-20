@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
 	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
-	  <WarnOn>3390</WarnOn>
+	  <WarnOn>3390; 40</WarnOn>
   </PropertyGroup>
 
   <ItemGroup>
