@@ -24,6 +24,12 @@ module Demo =
 
 
 
+    let someFunction3 (x: int) =
+        task {
+           let! result1 = someFunction (x+x)
+           return (result1+result1)
+        }
+
 
 /// Get a list of web pages asynchronously and sum their size
 let sumPageSizesAsync (uris: Uri list) = 

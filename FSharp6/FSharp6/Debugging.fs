@@ -4,6 +4,8 @@
 #r "nuget: FSharp.Core.Fluent, 3.0.1"
 *)
 
+
+
 module StringInterpolation =
 
     let x = 1
@@ -11,9 +13,9 @@ module StringInterpolation =
     let now = System.DateTime.Now
     let text = "cats"
 
-    let string = $"I say {x} is one and {pi} is pi"
+    let string = $"I say {x+x+x} is one and {pi} is pi"
+
     
-    let text = now.ToString("G")
     printfn $"""I say again %d{x} is one and {text} is pi"""
     // output: I say again 1 is one and 3.14 is pi
 
@@ -44,7 +46,7 @@ module OpenType =
 
     let v2 = P + P
     let vv = Something(3)
-
+    
     let one = Min(1.0, 2.0)
     let onef = Min(1.0f, 2.0f)
     let two = Max(1.0, 2.0)
@@ -257,10 +259,248 @@ module Applicatives2 =
         printfn "total nodes %s = %d" msg nodes
         printfn "----" 
 
-    test "using and!" test1
+    test "using and!" test1 
+//       [ 1,2,3,4,5 ]
+        // The function 'test' expects two arguments separated by spaces (i.e. 'curried'), but
+        // is here given three or more. The argument beginning 'adskhahkwcewe...' was unexpected.
+        // Consider removing an argument, or adding parentheses around
+        // an argument, or changing the definition of 'test' to take an additional argument.
+
     test "using let!" test2
 
 
+    type C() =
+        static member M(x:int, y:int) = 1
+        static member M (x:int) (y:string) = 1
+
+//    C.M (3,4)
+
+    type D =
+       | D of int
+       | E of int
+
+   // D 1 2
+
+    let f (x: int) (y: int option) = 1
+
+  //  f 1 Some 0 // The function 'f' expects two arguments, but is given three.
+
+module Matrix =
+
+    let test0 () = ()
+    let test1 (x: string) = ()
+    let test2 (x: string, y: int) = ()
+    let test11 (x: int) (y: int) = ()
+    let test21 (x: string, y: int) (z:int) = ()
+    let test12 (x: string) (y: int, z:int) = ()
+    let test22 (x: string, y: int) (z: int, w:int) = ()
+
+    let v0_1 = test0 "using and!"
+        // The function 'test0' expects to be invoked as 'test0 ()'. The argument beginning '"using and..."'
+        // is unexpected. Consider replacing the argument with '()' or
+        // changing the definition of 'test0' to take an additional argument
+
+    let v1_0 = test1 ()
+        // The function 'test1' expects 1 argument of type 'string'. For example:
+        //     test1 x
+        // Consider replacing '()' with an argument of type 'string', or changing the definition
+        // of 'test1' to remove the argument.
+
+        // NOTE: the text "The function has a parameter...." is shown if not enough arguments
+        // NOTE: the text "The argument beginning...." is shown if too many arguments
+
+    let v1_2 = test1 ("a", 1)
+        // The function 'test1' expects one argument of type 'string', but is here given
+        // 2 as a tuple. Consider removing an argument, or changing the definition of 'test1'.
+
+        // NOTE: the text 'or changing...' is only added if in the same assembly (file?)
+
+    let v1_11 = test1 "a" 1
+        // The function 'test1' expects one argument of type 'string', but
+        // is here given 2. The argument '1' is unexpected. Consider removing an argument,
+        // or changing the definition of 'test1'.
+
+    let v2_0 = test2 ()
+        // The function 'test2' expects 2 arguments of type 'string' and 'int' as a tuple. For example:
+        //     test2 (x, y)
+        // Consider replacing '()' with 2 arguments of type 'string' and 'int' as a tuple, or changing the definition of 'test2'.
+
+    let v2_1 = test2 "a"
+        // The function 'test2' expects 2 arguments of type 'string' and 'int' as a tuple and is here
+        // given 1. For example:
+        //     test2 (x, y)
+        // Consider replacing '"a"' with 2 arguments of type 'string' and 'int' as a tuple.
+
+    let v2_3 = test2 ("a", 1, 2)
+        // The function 'test2' expects 2 arguments as a tuple and is here given 3. For example:
+        //     test2 (x, y)
+        // Consider removing an argument.
+
+    let v2_11 = test2 "acasasca" 1
+        // The function 'test2' expects 2 arguments as a tuple and is here given 2 arguments separated
+        // by spaces (i.e. 'curried'). Consider grouping the arguments using a tuple:
+        //    test2 ("acasasca", 1)
+        
+        // Note, if sample program text is too long then just don't show it, e.g. just this:
+        //     Consider grouping the arguments using a tuple.
+
+
+    let v11_111 = test11 "using and!" 3 5
+        // The function 'test11' expects two arguments separated by spaces (i.e. 'curried'), but
+        // is here given three or more. The argument beginning 'adskhahkwcewe...' is unexpected.
+        // Consider removing an argument, or adding parentheses around
+        // an argument, or changing the definition of 'test11'.
+
+    let v11_2 = test11 ("using and!", 3)
+        // The function 'test11' expects two arguments separated by spaces (i.e. 'curried'), but
+        // is here given a single argument that is a tuple with two elements. 
+
+module CEs =
+
+    type M<'T, 'Vars> =
+        { Name: string option
+          Members: 'T list
+          Variables: 'Vars }
+
+    type M<'T> = M<'T, unit>
+
+    type CE() =
+            
+        member _.Zero() : M<'T> =
+            { Name = None
+              Members = [] 
+              Variables = () }
+
+        member _.Combine (model1: M<'T>, model2: M<'T>) : M<'T> =
+            let newName = 
+                match model2.Name with
+                | None -> model1.Name
+                | res -> res
+            { Name = newName
+              Members = List.append model1.Members model2.Members 
+              Variables = () }
+
+        member _.Delay(f) : M<'T, 'Vars> = f()
+
+        member _.Run(model: M<'T, 'Vars>) : M<'T> =
+            { Name = model.Name
+              Members = model.Members
+              Variables = () }
+
+        member this.For(methods, f) :M<'T> = 
+            let methodList = Seq.toList methods
+            match methodList with 
+            | [] -> this.Zero()
+            | [x] -> f(x)
+            | head::tail ->
+                let mutable headResult = f(head)
+                for x in tail do 
+                    headResult <- this.Combine(headResult, f(x))
+                headResult
+
+        member _.Yield (item: 'T) : M<'T> = 
+            { Name = None
+              Members = [ item ]
+              Variables = () }
+
+        // Only for packing/unpacking the implicit variable space
+        member _.Bind (model1: M<'T, 'Vars>, f: ('Vars -> M<'T>)) : M<'T>  =
+            let model2 = f model1.Variables
+            let newName = 
+                match model2.Name with
+                | None -> model1.Name
+                | res -> res
+            { Name = newName
+              Members = model1.Members @ model2.Members
+              Variables = model2.Variables }
+
+        // Only for packing/unpacking the implicit variable space
+        member _.Return (varspace: 'Vars) : M<'T, 'Vars> = 
+            { Name = None
+              Members = [ ]
+              Variables = varspace }
+
+        [<CustomOperation("Name", MaintainsVariableSpaceUsingBind = true)>]
+        member _.setName (model: M<'T, 'Vars>, [<ProjectionParameter>] name: ('Vars -> string)) : M<'T, 'Vars>  =
+            { model with Name = Some (name model.Variables) }
+
+        [<CustomOperation("Member", MaintainsVariableSpaceUsingBind = true)>]
+        member _.addMember (model: M<'T, 'Vars>, [<ProjectionParameter>] item: ('Vars -> 'T))  : M<'T, 'Vars>  =
+            { model with Members = List.append model.Members [ item model.Variables ] }
+
+        // Note, using ParamArray doesn't work in conjunction with ProjectionParameter
+        [<CustomOperation("Members", MaintainsVariableSpaceUsingBind = true)>]
+        member _.addMembers (model: M<'T, 'Vars>, [<ProjectionParameter>] items: ('Vars -> 'T list)) : M<'T, 'Vars>  =
+            { model with Members = List.append model.Members (items model.Variables) }
+
+    let ce = CE()
+    module Test =
+        let x : M<double> =
+            ce { Name "Fred" }
+
+        let y = 
+            ce { 42 }
+
+        let z1 =
+            ce { Member 42 }
+
+        let z2 = 
+            ce {
+                Members [ 41; 42 ]
+            }
+        let z3 = 
+            ce {
+                Name "Fred"
+                42
+            }
+
+        let z4 = 
+            ce {
+                Member 41
+                Member 42
+            }
+
+        let z5 = 
+            ce {
+                Name "a"
+                Name "b"
+            }
+
+        let z6 : M<double> = 
+            ce {
+                let x = 1
+                Name "a"
+                Member 4.0
+            }
+
+        let z6 : M<double> = 
+            ce {
+                let x = "a"
+                Name (x + "b")
+                Member 4.0
+            }
+
+        let z8 : M<double> = 
+            ce {
+                let x1 = 1.0
+                let y2 = 2.0
+                Member (x1 + 3.0)
+                Member (y2 + 4.0)
+            }
+
+        let z9 =
+            ce {
+                let x = 1.0
+                Members [
+                    42.3 
+                    43.1 + x
+                ]
+            }
+
+        //let empty = 
+        //    ce { }
+
+    
 module Sample =
     let f() =
         let mutable finished = false
@@ -269,37 +509,6 @@ module Sample =
            if System.DateTime.Now.DayOfWeek = System.DayOfWeek.Monday then
               finished <- true
 
-
-module Tasks =
-    let someFunction (x: int) =
-        task {
-           return (x+x)
-        }
-
-
-    let rec someFunction2 (x: int) =
-        task {
-           let! result1 = someFunction (x+x)
-           let! result2 = someFunction (x+x)
-           let! result3 = someFunction (x+x)
-           let! result4 = someFunction (x+x)
-           if today then 
-              return! someFunction (x+1)
-           else
-              return 3
-        }
-
-    let someFunction3 (x: int) =
-        async {
-           let! result1 = someFunction (x+x)
-           let! result2 = someFunction (x+x)
-           let! result3 = someFunction (x+x)
-           let! result4 = someFunction (x+x)
-           return (result1+result2+result3+result4)
-        }
-
-
-*)
 
 /// <summary>
 /// Get the average number of viewers for each doctor's series run

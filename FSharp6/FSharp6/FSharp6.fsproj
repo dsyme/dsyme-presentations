@@ -4,8 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
 	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
-	  <WarnOn>3390</WarnOn> <!-- xml doc checking -->
-	  <WarnOn>40</WarnOn>
+	  <WarnOn>3390</WarnOn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,4 +18,7 @@
     <PackageReference Include="Giraffe" Version="5.0.0" />
   </ItemGroup>
 
+	<PropertyGroup>
+		<NoWarn>40</NoWarn>
+	</PropertyGroup>
 </Project>
